@@ -358,9 +358,15 @@
           <h2 class="panel-heading light">{t.contact.heading}</h2>
         </div>
         <p class="contact-body">{t.contact.body}</p>
-        <a href="mailto:{t.contact.email}" class="contact-email">{t.contact.email}</a>
 
-        <form class="contact-form" onsubmit={(e) => e.preventDefault()}>
+        <form
+          class="contact-form"
+          action="https://formsubmit.co/xiaohuaw765@gmail.com"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="CAY's Studio — New Inquiry" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
           <div class="form-group">
             <label for="email">{t.contact.fields.email}</label>
             <input type="email" id="email" name="email" required />
@@ -962,24 +968,6 @@
     color: rgba(255,255,255,0.4);
     margin: 1.5rem 0 1rem;
     max-width: 520px;
-  }
-
-  .contact-email {
-    display: inline-block;
-    font-family: var(--font-sans);
-    font-size: 0.78rem;
-    letter-spacing: 0.12em;
-    color: var(--color-gold-light);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(212,184,150,0.3);
-    padding-bottom: 2px;
-    margin-bottom: 2.5rem;
-    transition: border-color 0.2s;
-
-    &:hover {
-      border-color: var(--color-gold-light);
-      opacity: 1;
-    }
   }
 
   .contact-form {
