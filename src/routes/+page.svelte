@@ -366,6 +366,7 @@
         >
           <input type="hidden" name="_subject" value="CAY's Studio — New Inquiry" />
           <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://xiaohuawang-chrissy.github.io/CAYs-Studio/" />
           <input type="hidden" name="_template" value="table" />
           <div class="form-group">
             <label for="email">{t.contact.fields.email}</label>
