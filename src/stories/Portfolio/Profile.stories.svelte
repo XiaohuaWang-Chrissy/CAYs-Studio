@@ -19,6 +19,7 @@
   import { defineMeta } from '@storybook/addon-svelte-csf';
   import Profile from '$lib/components/Portfolio/Profile.svelte';
 
+
   const { Story } = defineMeta({
     title: 'Portfolio/Profile',
     component: Profile,

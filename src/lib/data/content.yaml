@@ -1,0 +1,60 @@
+profile:
+  name: Jacob Riis
+  tagline: Police reporter and tenement chronicler
+  photo: photos/jacob-riis.jpg
+  photoAlt: Jacob Riis, in a portrait taken around 1900.
+  email: jriis@eveningsun.com
+  github: jacob-riis
+  linkedin: jacob-riis
+  bio: |
+    I'm a police reporter at Mulberry Street headquarters for the Evening Sun, lecturing each week with lantern slides drawn from the flash photography I've been making in the Lower East Side.
+
+    I'm seeking the chance to turn this work into reform — better housing laws, better schools for the children of the poor, and the demolition of Mulberry Bend.
+clips:
+  - slug: police
+    title: Police Headquarters Reporter
+    image: /photos/police.jpg
+    imageAlt: Mulberry Street police headquarters in the late 1880s
+    description: A decade of police-beat reporting at 300 Mulberry Street for the New-York Tribune and the Evening Sun, covering crime, immigration, and the daily life of the Lower East Side.
+    url: https://www.loc.gov/collections/jacob-riis/
+    skills:
+      - Police reporting
+      - Source building
+      - Public records
+      - Breaking news
+    body: |
+      The police beat is where I learned the city. Mulberry Street headquarters sits on the edge of the worst tenements in New York, and every story I covered as a reporter — every arrest, every fire, every dead body — pulled me deeper into the lives of the people on the other side of the door.
+
+      I didn't yet know I would write a book about what I was seeing. But I was learning the geography, the families, and the patterns. The reform work that came later would have been impossible without the reporting work that came first.
+
+  - slug: how-the-other-half
+    title: How the Other Half Lives
+    image: /photos/bandits-roost.jpg
+    imageAlt: Bandit's Roost, a Riis photograph of an alley off Mulberry Street, 1888
+    description: A book-length investigation of New York tenement life, illustrated with my own flash photographs of the city after dark. Published by Charles Scribner's Sons in 1890.
+    url: https://www.loc.gov/item/06017839/
+    skills:
+      - Flash photography
+      - Long-form writing
+      - Public speaking
+      - Documentary
+    body: |
+      The flash powder gave me the picture, but the picture is only half the work. The other half is the words — telling readers in the brownstones uptown what the inside of a Five Points tenement smells like, sounds like, who lives there and how they came to be there.
+
+      The book sold well enough that even Theodore Roosevelt came to find me. He left a note on my door saying he had read the book and had come to help. That was the moment I understood what reporting could do.
+
+  - slug: mulberry-bend
+    title: The Battle for Mulberry Bend
+    image: /photos/mulberry-bend.jpg
+    imageAlt: Mulberry Bend before demolition, photographed in the early 1890s
+    description: A sustained reporting and advocacy effort to demolish Mulberry Bend, the most notorious slum block in lower Manhattan, and replace it with a public park. The block came down in 1894. Columbus Park stands there today.
+    url: https://www.mcny.org/
+    skills:
+      - Accountability reporting
+      - Government affairs
+      - Advocacy
+      - Photography
+    body: |
+      The Bend was three acres of the foulest tenement block in the city — narrow alleys where the sun never reached, buildings that should have been condemned a generation earlier, and a death rate among the children many times higher than the city average.
+
+      I wrote about it for years. I photographed it. I lectured on it. Reform is slow. The Bend went from a block I first reported on as a young man to a public park nearly twenty years later.

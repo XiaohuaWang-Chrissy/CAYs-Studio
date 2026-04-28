@@ -5,3 +5,8 @@ build/
 .claude/
 .lighthouseci/
 *.log
+
+# Large video files — host externally (Vimeo, Cloudflare Stream, etc.)
+static/*.mp4
+static/*.mov
+static/*.webm
