@@ -832,7 +832,7 @@
     transition: filter 0.4s ease, transform 0.5s ease;
 
     .member:hover & {
-      filter: grayscale(80%) contrast(1.05);
+      filter: grayscale(0%) contrast(1);
       transform: scale(1.03);
     }
   }
