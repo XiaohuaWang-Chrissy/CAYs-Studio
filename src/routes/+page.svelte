@@ -49,28 +49,30 @@
           {
             name: 'Chrissy Wang',
             role: 'Co-Founder · Filmmaker & Creative Director',
-            bio: 'Filmmaker with experience across brand films, documentaries, and narrative projects. Leads creative direction and production.',
+            bio: 'Documentary producer and motion graphics designer with a background in data journalism. Leads creative direction and visual storytelling across social content production.',
             photo: '/Chrissy.JPG',
             website: 'https://xiaohuawang-chrissy.github.io/my-static-site-personal/',
           },
           {
+            name: 'Alexa Ge',
+            role: 'Co-Founder · Documentary Filmmaker',
+            bio: 'Brand strategist and video producer with experience in FMCG campaigns, social content, and U.S. market entry for Chinese brands.',
+            photo: '/Alexa.JPG',
+            photoScale: 1.35,
+            website: '/Alexa Portfolio 2026.pdf',
+            websiteLabel: 'View Portfolio',
+          },
+          {
             name: 'Yvonne Liu',
             role: 'Co-Founder · Journalist & Producer',
-            bio: 'Journalist and producer. Brings an editorial approach to content strategy, scripting, and project management.',
+            bio: 'Writer and designer with a background in journalism, photography, and visual storytelling. Handles scripting, content strategy, and production coordination.',
             photo: '/Yvonne.JPG',
             website: 'https://www.yv1-1onne.com/',
           },
           {
-            name: 'Alexa Ge',
-            role: 'Co-Founder · Documentary Filmmaker',
-            bio: 'Documentary filmmaker with a focus on character-driven storytelling and observational style.',
-            photo: null,
-            website: null,
-          },
-          {
             name: 'Jade Sun',
             role: 'Art Director',
-            bio: 'Visual artist and art director working across photography, graphic design, and moving image. Brings a distinctive aesthetic sensibility to every project.',
+            bio: 'Visual artist working across photography, graphic design, and moving image. Shapes the visual identity and aesthetic direction of content.',
             photo: '/Jade.jpg',
             photoScale: true,
             website: 'https://www.jadesun.art/',
@@ -137,28 +139,30 @@
           {
             name: 'Chrissy Wang',
             role: '联合创始人 · 电影导演 & 创意总监',
-            bio: '电影制作人，有品牌影片、纪录片和叙事影像方面的工作经验，负责项目的创意方向与制作执行。',
+            bio: '纪录片导演与动态图形设计师，具有数据新闻背景，负责社媒内容的创意方向与视觉叙事。',
             photo: '/Chrissy.JPG',
             website: 'https://xiaohuawang-chrissy.github.io/my-static-site-personal/',
           },
           {
+            name: 'Alexa Ge',
+            role: '联合创始人 · 纪录片导演',
+            bio: '品牌策略与视频制作，有快消品牌营销、社媒内容及中国品牌美国市场落地的实战经验。',
+            photo: '/Alexa.JPG',
+            photoScale: true,
+            website: '/Alexa Portfolio 2026.pdf',
+            websiteLabel: '查看作品集',
+          },
+          {
             name: 'Yvonne Liu',
             role: '联合创始人 · 记者 & 制片人',
-            bio: '记者与制片人，负责内容策略、脚本撰写和项目统筹，具有新闻写作和编辑背景。',
+            bio: '写作者与设计师，具有新闻、摄影与视觉叙事背景，负责脚本创作、内容策略与项目统筹。',
             photo: '/Yvonne.JPG',
             website: 'https://www.yv1-1onne.com/',
           },
           {
-            name: 'Alexa Ge',
-            role: '联合创始人 · 纪录片导演',
-            bio: '纪录片导演，专注于人物驱动的叙事内容和纪实风格的拍摄方式。',
-            photo: null,
-            website: null,
-          },
-          {
             name: 'Jade Sun',
             role: '艺术总监',
-            bio: '视觉艺术家与艺术总监，创作涵盖摄影、平面设计与影像。以鲜明的视觉审美参与每一个项目的创作。',
+            bio: '视觉艺术家，创作涵盖摄影、平面设计与影像，负责内容的视觉风格与美术方向。',
             photo: '/Jade.jpg',
             photoScale: true,
             website: 'https://www.jadesun.art/',
@@ -323,7 +327,7 @@
             <div class="member">
               <div class="member-photo-wrap">
                 {#if m.photo}
-                  <img src="{base}{m.photo}" alt={m.name} class="member-photo" class:member-photo--zoomed={m.photoScale} />
+                  <img src="{base}{m.photo}" alt={m.name} class="member-photo" class:member-photo--zoomed={m.photoScale} style={m.photoScale && typeof m.photoScale === 'number' ? `--base-scale: ${m.photoScale}` : ''} />
                 {:else}
                   <div class="member-placeholder">
                     <span>{t.team.photoSoon}</span>
@@ -334,8 +338,8 @@
               <p class="member-role">{m.role}</p>
               <p class="member-bio">{m.bio}</p>
               {#if m.website}
-                <a href={m.website} class="member-link" target="_blank" rel="noopener noreferrer">
-                  {t.team.visitSite} ↗
+                <a href={m.website.startsWith('/') ? `${base}${m.website}` : m.website} class="member-link" target="_blank" rel="noopener noreferrer">
+                  {m.websiteLabel ?? t.team.visitSite} ↗
                 </a>
               {/if}
             </div>
@@ -875,12 +879,12 @@
     }
 
     &--zoomed {
-      transform: scale(1.18);
+      transform: scale(var(--base-scale, 1.18));
       object-position: center center;
     }
 
     .member:hover &--zoomed {
-      transform: scale(1.22);
+      transform: scale(calc(var(--base-scale, 1.18) + 0.05));
     }
   }
 
