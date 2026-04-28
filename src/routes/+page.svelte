@@ -67,6 +67,14 @@
             photo: null,
             website: null,
           },
+          {
+            name: 'Jade Sun',
+            role: 'Art Director',
+            bio: 'Visual artist and art director working across photography, graphic design, and moving image. Brings a distinctive aesthetic sensibility to every project.',
+            photo: '/Jade.jpg',
+            photoScale: true,
+            website: 'https://www.jadesun.art/',
+          },
         ],
         photoSoon: 'Photo coming soon',
         visitSite: 'Visit Website',
@@ -146,6 +154,14 @@
             bio: '纪录片导演，专注于人物驱动的叙事内容和纪实风格的拍摄方式。',
             photo: null,
             website: null,
+          },
+          {
+            name: 'Jade Sun',
+            role: '艺术总监',
+            bio: '视觉艺术家与艺术总监，创作涵盖摄影、平面设计与影像。以鲜明的视觉审美参与每一个项目的创作。',
+            photo: '/Jade.jpg',
+            photoScale: true,
+            website: 'https://www.jadesun.art/',
           },
         ],
         photoSoon: '照片即将更新',
@@ -296,7 +312,7 @@
   <!-- TEAM -->
   {#if active === 'team'}
     <div class="panel panel--light scrollable">
-      <div class="panel-inner">
+      <div class="panel-inner panel-inner--team">
         <div class="section-intro">
           <span class="label">{t.team.label}</span>
           <h2 class="panel-heading">{t.team.heading}</h2>
@@ -307,7 +323,7 @@
             <div class="member">
               <div class="member-photo-wrap">
                 {#if m.photo}
-                  <img src="{base}{m.photo}" alt={m.name} class="member-photo" />
+                  <img src="{base}{m.photo}" alt={m.name} class="member-photo" class:member-photo--zoomed={m.photoScale} />
                 {:else}
                   <div class="member-placeholder">
                     <span>{t.team.photoSoon}</span>
@@ -511,6 +527,14 @@
 
     @include mobile {
       padding: 2rem 1.25rem 3rem;
+    }
+
+    &--team {
+      max-width: 560px;
+
+      @include mobile {
+        max-width: 100%;
+      }
     }
   }
 
@@ -815,12 +839,12 @@
   /* ===== TEAM ===== */
   .team-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 2.5rem;
 
     @include mobile {
       grid-template-columns: 1fr 1fr;
-      gap: 1rem;
+      gap: 1.25rem 1rem;
     }
   }
 
@@ -848,6 +872,15 @@
     .member:hover & {
       filter: grayscale(0%) contrast(1);
       transform: scale(1.03);
+    }
+
+    &--zoomed {
+      transform: scale(1.18);
+      object-position: center center;
+    }
+
+    .member:hover &--zoomed {
+      transform: scale(1.22);
     }
   }
 
