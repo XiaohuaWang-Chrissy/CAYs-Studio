@@ -44,7 +44,7 @@
       team: {
         label: 'OUR TEAM',
         heading: 'The Team',
-        intro: 'Three co-founders with backgrounds in film, journalism, and documentary.',
+        intro: 'A team of filmmakers, journalists, documentary directors, and a visual art director.',
         members: [
           {
             name: 'Chrissy Wang',
@@ -132,7 +132,7 @@
       team: {
         label: '团队介绍',
         heading: '团队成员',
-        intro: '三位联合创始人，分别来自电影、新闻与纪录片领域。',
+        intro: '团队由电影人、记者、纪录片导演与视觉艺术总监组成。',
         members: [
           {
             name: 'Chrissy Wang',
@@ -572,10 +572,10 @@
     grid-column: 1;
     align-self: start;
     font-family: var(--font-sans);
-    font-weight: var(--font-weight-light);
-    font-size: clamp(0.85rem, 2vw, 1.1rem);
-    letter-spacing: 0.28em;
-    color: rgba(255,255,255,0.75);
+    font-weight: var(--font-weight-medium);
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    letter-spacing: 0.32em;
+    color: rgba(255,255,255,0.92);
     text-transform: uppercase;
     margin: 0;
   }
