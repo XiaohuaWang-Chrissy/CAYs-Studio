@@ -1,5 +1,6 @@
 <script>
   import { lang } from '$lib/stores/lang.svelte.js';
+  import { base } from '$app/paths';
 
   const translations = {
     en: {
@@ -298,7 +299,7 @@
             <div class="member">
               <div class="member-photo-wrap">
                 {#if m.photo}
-                  <img src={m.photo} alt={m.name} class="member-photo" />
+                  <img src="{base}{m.photo}" alt={m.name} class="member-photo" />
                 {:else}
                   <div class="member-placeholder">
                     <span>{t.team.photoSoon}</span>
