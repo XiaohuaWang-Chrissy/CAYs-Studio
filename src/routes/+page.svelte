@@ -51,21 +51,25 @@
             role: 'Co-Founder · Filmmaker & Creative Director',
             bio: 'Filmmaker with experience across brand films, documentaries, and narrative projects. Leads creative direction and production.',
             photo: '/Chrissy.JPG',
+            website: 'https://xiaohuawang-chrissy.github.io/my-static-site-personal/',
           },
           {
             name: 'Yvonne Liu',
             role: 'Co-Founder · Journalist & Producer',
             bio: 'Journalist and producer. Brings an editorial approach to content strategy, scripting, and project management.',
             photo: '/Yvonne.JPG',
+            website: 'https://www.yv1-1onne.com/',
           },
           {
             name: 'Alexa Ge',
             role: 'Co-Founder · Documentary Filmmaker',
             bio: 'Documentary filmmaker with a focus on character-driven storytelling and observational style.',
             photo: null,
+            website: null,
           },
         ],
         photoSoon: 'Photo coming soon',
+        visitSite: 'Visit Website',
       },
       contact: {
         label: 'GET IN TOUCH',
@@ -127,21 +131,25 @@
             role: '联合创始人 · 电影导演 & 创意总监',
             bio: '电影制作人，有品牌影片、纪录片和叙事影像方面的工作经验，负责项目的创意方向与制作执行。',
             photo: '/Chrissy.JPG',
+            website: 'https://xiaohuawang-chrissy.github.io/my-static-site-personal/',
           },
           {
             name: 'Yvonne Liu',
             role: '联合创始人 · 记者 & 制片人',
             bio: '记者与制片人，负责内容策略、脚本撰写和项目统筹，具有新闻写作和编辑背景。',
             photo: '/Yvonne.JPG',
+            website: 'https://www.yv1-1onne.com/',
           },
           {
             name: 'Alexa Ge',
             role: '联合创始人 · 纪录片导演',
             bio: '纪录片导演，专注于人物驱动的叙事内容和纪实风格的拍摄方式。',
             photo: null,
+            website: null,
           },
         ],
         photoSoon: '照片即将更新',
+        visitSite: '访问个人网站',
       },
       contact: {
         label: '联系我们',
@@ -309,6 +317,11 @@
               <h3 class="member-name">{m.name}</h3>
               <p class="member-role">{m.role}</p>
               <p class="member-bio">{m.bio}</p>
+              {#if m.website}
+                <a href={m.website} class="member-link" target="_blank" rel="noopener noreferrer">
+                  {t.team.visitSite} ↗
+                </a>
+              {/if}
             </div>
           {/each}
         </div>
@@ -878,7 +891,22 @@
     font-size: 0.8rem;
     line-height: 1.75;
     color: var(--color-text-muted);
-    margin: 0;
+    margin: 0 0 0.75rem;
+  }
+
+  .member-link {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    color: var(--color-dark);
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-dark);
+    padding-bottom: 1px;
+    transition: opacity 0.2s;
+
+    &:hover { opacity: 0.45; }
   }
 
   .team-intro {
