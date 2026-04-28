@@ -12,23 +12,23 @@
       ],
       hero: {
         location: 'BASE IN NYC',
-        sub: 'Creative Content Studio',
+        sub: 'Filmmakers · Journalists · Documentarians',
         cta1: 'SEE OUR WORK',
         cta2: 'GET A QUOTE',
       },
       about: {
         label: 'WHO WE ARE',
-        heading: 'We Tell Your\nBrand\'s Story',
-        body: 'CAY\'s Studio is a New York-based creative content studio specializing in social media advertising video production for Chinese brands entering global markets. We combine cinematic craftsmanship with an efficient production pipeline — delivering content that converts.',
-        statsLabel: ['Projects', 'Cities', 'Response'],
-        statsVal: ['100+', '3', '24h'],
+        heading: 'Cinematic Eye.\nJournalistic Soul.',
+        body: 'CAY\'s Studio is built by professional filmmakers, award-winning journalists, and documentary directors — united by one conviction: that great content doesn\'t just capture attention, it earns trust.\n\nBased in New York City, we bring cinematic precision, editorial-sharp copy, and genuine social media instinct to every project. We know what stops the scroll, what keeps viewers watching, and what moves them to act. Our aesthetic travels. Our stories land.',
+        statsLabel: ['Projects Delivered', 'Years of Craft', 'Response Time'],
+        statsVal: ['100+', '10+', '24h'],
         servLabel: 'WHAT WE DO',
-        servHeading: 'Full-Service\nContent Production',
+        servHeading: 'Where Film Meets\nthe Feed',
         items: [
-          { num: '01', title: 'Video Production', desc: 'Studio and on-location shoots, from concept to final cut.' },
-          { num: '02', title: 'Social Media', desc: 'Content optimized for TikTok, Instagram Reels, YouTube Shorts.' },
-          { num: '03', title: 'Brand Storytelling', desc: 'Culturally fluent narratives bridging Chinese brands globally.' },
-          { num: '04', title: 'Fast Turnaround', desc: 'Broadcast-quality content delivered on schedule, every time.' },
+          { num: '01', title: 'Cinematic Production', desc: 'Professional filmmakers and documentary directors behind every frame — from concept and scripting to final cut and color grade.' },
+          { num: '02', title: 'Copywriting & Scripting', desc: 'Journalists who write. Copy that hooks in the first second, holds through the last, and converts without feeling like an ad.' },
+          { num: '03', title: 'Documentary Storytelling', desc: 'Authentic narratives rooted in real people and real moments. Because today\'s audiences can spot a sales pitch from a mile away.' },
+          { num: '04', title: 'Platform-Native Strategy', desc: 'Deep instinct across TikTok, Instagram Reels, and YouTube Shorts. We know the algorithm — and how to make content that outlasts it.' },
         ],
       },
       work: {
@@ -42,11 +42,27 @@
       },
       team: {
         label: 'OUR TEAM',
-        heading: 'The People\nBehind the Lens',
+        heading: 'Filmmakers,\nJournalists,\nStorytellers.',
+        intro: 'Three founders. Three disciplines. One shared obsession with stories that actually work.',
         members: [
-          { name: 'Chrissy', role: 'Co-Founder · Creative Director', photo: '/Chrissy.JPG' },
-          { name: 'Yvonne', role: 'Co-Founder · Producer', photo: '/Yvonne.JPG' },
-          { name: 'Alexa',  role: 'Co-Founder · Strategist',       photo: null },
+          {
+            name: 'Chrissy Wang',
+            role: 'Co-Founder · Filmmaker & Creative Director',
+            bio: 'Professional filmmaker with a cinematic eye honed across brand films, documentaries, and narrative projects. Chrissy leads creative vision and brings every story to life on screen.',
+            photo: '/Chrissy.JPG',
+          },
+          {
+            name: 'Yvonne Liu',
+            role: 'Co-Founder · Journalist & Producer',
+            bio: 'Journalist turned producer with a reporter\'s instinct for finding the angle that matters. Yvonne drives editorial strategy, keeps production tight, and makes sure every frame earns its place.',
+            photo: '/Yvonne.JPG',
+          },
+          {
+            name: 'Alexa Ge',
+            role: 'Co-Founder · Documentary Filmmaker',
+            bio: 'Documentary filmmaker who believes authenticity is the most powerful conversion tool. Alexa specializes in real stories — the kind that build brands people actually believe in.',
+            photo: null,
+          },
         ],
         photoSoon: 'Photo coming soon',
       },
@@ -58,7 +74,7 @@
         email: 'hello@caysstudio.com',
       },
       footer: {
-        tagline: 'Creative Content Studio · New York City',
+        tagline: 'Filmmakers · Journalists · Documentarians · New York City',
         copy: '© 2025 CAY\'s Studio',
       },
     },
@@ -72,23 +88,23 @@
       ],
       hero: {
         location: '纽约工作室',
-        sub: '信息流视频创意制作',
+        sub: '电影人 · 记者 · 纪录片导演',
         cta1: '查看作品',
         cta2: '免费报价',
       },
       about: {
         label: '关于我们',
-        heading: '讲述您的\n品牌故事',
-        body: 'CAY\'s Studio 是一家总部位于纽约的创意内容工作室，专注于为中国品牌出海提供高质量信息流视频制作服务。以电影级制作品质结合高效流程，为品牌打造真正能够转化的内容。',
-        statsLabel: ['项目经验', '合作城市', '响应时间'],
-        statsVal: ['100+', '3', '24h'],
+        heading: '电影的眼睛\n记者的本能',
+        body: 'CAY\'s Studio 由专业电影制作人、优秀记者与纪录片导演联合创立——我们相信，真正好的内容不只是抢眼，更是赢得信任。\n\n我们以电影级的视觉审美、记者的文案功底和对社交媒体的深度理解为出发点，为每一个项目注入真正的网感与创作力。我们知道什么能让用户停住手指、什么让他们看到最后、什么让他们付诸行动。',
+        statsLabel: ['项目经验', '创作年限', '响应时间'],
+        statsVal: ['100+', '10+', '24h'],
         servLabel: '服务内容',
-        servHeading: '全流程\n内容制作',
+        servHeading: '电影的质感\n信息流的语言',
         items: [
-          { num: '01', title: '视频拍摄制作', desc: '棚内与外景专业拍摄，从创意概念到最终剪辑全程跟进。' },
-          { num: '02', title: '社媒内容策略', desc: '针对TikTok、Instagram Reels、YouTube Shorts专属优化。' },
-          { num: '03', title: '品牌故事叙述', desc: '跨文化叙事，让中国品牌与海外消费者建立真实连接。' },
-          { num: '04', title: '高效交付', desc: '规模化制作流程，广播级画质，按时交付，每次如此。' },
+          { num: '01', title: '影视级视频制作', desc: '专业电影制作人与纪录片导演主导每一帧——从脚本策划、实景拍摄到剪辑调色，全程掌控。' },
+          { num: '02', title: '文案与脚本创作', desc: '记者出身的文案团队。第一秒就能钩住人，最后一帧还在发力——广告感全无，转化效果一流。' },
+          { num: '03', title: '纪录片式品牌叙事', desc: '扎根真实人物与真实故事的叙事方式。因为今天的受众，对套路一眼就能看穿。' },
+          { num: '04', title: '平台原生内容策略', desc: '深度理解TikTok、Instagram Reels、YouTube Shorts的算法逻辑与用户心理。我们不只追算法，我们让内容超越算法。' },
         ],
       },
       work: {
@@ -102,11 +118,27 @@
       },
       team: {
         label: '团队介绍',
-        heading: '镜头背后\n的创作者',
+        heading: '电影人、记者\n纪录片导演。',
+        intro: '三位创始人，三种专业背景，同一个对好故事的执念。',
         members: [
-          { name: 'Chrissy', role: '联合创始人 · 创意总监', photo: '/Chrissy.JPG' },
-          { name: 'Yvonne', role: '联合创始人 · 制片人',    photo: '/Yvonne.JPG' },
-          { name: 'Alexa',  role: '联合创始人 · 策略总监',  photo: null },
+          {
+            name: 'Chrissy Wang',
+            role: '联合创始人 · 电影导演 & 创意总监',
+            bio: '专业电影制作人，视觉审美锐利，在品牌影片、纪录片与叙事影像领域拥有丰富经验。Chrissy 主导创意方向，将每一个品牌故事化作真正打动人心的银幕语言。',
+            photo: '/Chrissy.JPG',
+          },
+          {
+            name: 'Yvonne Liu',
+            role: '联合创始人 · 记者 & 制片人',
+            bio: '记者出身的制片人，拥有找准故事角度的本能直觉。Yvonne 负责统筹创作策略与制作流程，确保每一帧画面都物尽其用。',
+            photo: '/Yvonne.JPG',
+          },
+          {
+            name: 'Alexa Ge',
+            role: '联合创始人 · 纪录片导演',
+            bio: '纪录片导演，相信真实感是最有力的转化工具。Alexa 专注于讲述真实故事——那种能让品牌真正被人信任的故事。',
+            photo: null,
+          },
         ],
         photoSoon: '照片即将更新',
       },
@@ -118,7 +150,7 @@
         email: 'hello@caysstudio.com',
       },
       footer: {
-        tagline: '创意内容工作室 · 纽约',
+        tagline: '电影人 · 记者 · 纪录片导演 · 纽约',
         copy: '© 2025 CAY\'s Studio',
       },
     },
@@ -217,7 +249,11 @@
           <span class="label">{t.about.label}</span>
           <h2 class="panel-heading">{t.about.heading}</h2>
         </div>
-        <p class="about-body">{t.about.body}</p>
+        <div class="about-body">
+          {#each t.about.body.split('\n\n') as para}
+            <p>{para}</p>
+          {/each}
+        </div>
         <div class="stats-row">
           {#each t.about.statsVal as val, i}
             <div class="stat">
@@ -256,6 +292,7 @@
           <span class="label">{t.team.label}</span>
           <h2 class="panel-heading">{t.team.heading}</h2>
         </div>
+        <p class="team-intro">{t.team.intro}</p>
         <div class="team-grid">
           {#each t.team.members as m}
             <div class="member">
@@ -270,6 +307,7 @@
               </div>
               <h3 class="member-name">{m.name}</h3>
               <p class="member-role">{m.role}</p>
+              <p class="member-bio">{m.bio}</p>
             </div>
           {/each}
         </div>
@@ -832,7 +870,23 @@
     letter-spacing: 0.15em;
     color: var(--color-warm-gray);
     text-transform: uppercase;
+    margin: 0 0 0.75rem;
+  }
+
+  .member-bio {
+    font-size: 0.8rem;
+    line-height: 1.75;
+    color: var(--color-text-muted);
     margin: 0;
+  }
+
+  .team-intro {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-light);
+    color: var(--color-warm-gray);
+    margin-bottom: 2.5rem;
+    font-style: italic;
   }
 
   /* ===== CONTACT ===== */
