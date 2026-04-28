@@ -20,8 +20,8 @@
         label: 'WHO WE ARE',
         heading: 'Film. Journalism.\nDocumentary.',
         body: 'CAY\'s Studio is a New York-based content studio founded by professional filmmakers, journalists, and documentary directors. We produce social media video content for Chinese brands in global markets.\n\nOur background shapes how we work — with attention to visual quality, clear and considered writing, and an understanding of how stories move on social platforms.',
-        statsLabel: ['Projects', 'Years of Experience', 'Response Time'],
-        statsVal: ['100+', '5+', '24h'],
+        statsLabel: ['Years of Experience', 'Response Time'],
+        statsVal: ['5+', '24h'],
         servLabel: 'WHAT WE DO',
         servHeading: 'What We\nOffer',
         items: [
@@ -96,8 +96,8 @@
         label: '关于我们',
         heading: '电影、新闻\n与纪录片',
         body: 'CAY\'s Studio 由电影制作人、记者与纪录片导演共同创立，工作室总部位于纽约。我们专注于为中国品牌出海提供信息流视频内容制作。\n\n我们的创作背景体现在工作方式上：注重视觉质量，文案清晰有逻辑，对内容在社交平台上的传播方式有实际的理解和经验。',
-        statsLabel: ['项目经验', '从业年限', '响应时间'],
-        statsVal: ['100+', '5+', '24h'],
+        statsLabel: ['从业年限', '响应时间'],
+        statsVal: ['5+', '24h'],
         servLabel: '服务内容',
         servHeading: '我们提供\n什么',
         items: [
