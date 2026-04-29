@@ -35,9 +35,38 @@
       work: {
         label: 'OUR WORK',
         heading: 'Selected Projects',
+        featured: {
+          category: 'Brand Campaign · Beauty',
+          year: '2022',
+          title: 'Spring Campaign',
+          desc: 'Full-cycle campaign production for a leading global beauty brand — concept development, on-set direction, and After Effects post-production for a seasonal product launch.',
+          link: 'https://www.youtube.com/watch?v=5YVKqj5TeQA',
+          linkLabel: 'Watch Film',
+        },
         items: [
-          { src: '/secornd story - final draft.mp4', caption: 'Brand Story · NYC' },
-          { src: '/Profile-Shuo Cai.mp4', caption: 'Profile · Studio' },
+          {
+            type: 'project',
+            category: 'F&B · Social Campaign',
+            year: '2023',
+            title: 'Limited Edition Launch',
+            desc: 'Campaign strategy and creative execution for a major F&B chain\'s limited-edition product, developed in collaboration with a top youth entertainment group.',
+          },
+          {
+            type: 'project',
+            category: 'F&B · IP Collaboration',
+            year: '2024',
+            title: 'Cross-Brand IP Campaign',
+            desc: 'Creative strategy and content production for a cross-brand IP collaboration, coordinated across three national sales channels — sold out at launch.',
+          },
+          {
+            type: 'project',
+            category: 'DTC · Social Content',
+            year: '2023',
+            title: 'U.S. Market Entry Content',
+            desc: 'Instagram content strategy and production for DTC brands in consumer electronics, beauty accessories, and outdoor sports entering the U.S. market.',
+          },
+          { type: 'video', src: '/secornd story - final draft.mp4', caption: 'Brand Story · NYC' },
+          { type: 'video', src: '/Profile-Shuo Cai.mp4', caption: 'Profile · Studio' },
         ],
         more: 'More projects coming soon',
       },
@@ -134,9 +163,38 @@
       work: {
         label: '作品展示',
         heading: '精选案例',
+        featured: {
+          category: '品牌大片 · 美妆',
+          year: '2022',
+          title: '春季营销大片',
+          desc: '为全球头部美妆品牌提供春季新品大片全流程制作——涵盖创意概念、现场执导与后期合成。',
+          link: 'https://www.youtube.com/watch?v=5YVKqj5TeQA',
+          linkLabel: '观看影片',
+        },
         items: [
-          { src: '/secornd story - final draft.mp4', caption: '品牌故事 · 纽约' },
-          { src: '/Profile-Shuo Cai.mp4',            caption: '人物介绍 · 工作室' },
+          {
+            type: 'project',
+            category: '餐饮 · 社交营销',
+            year: '2023',
+            title: '限定新品上市',
+            desc: '为头部餐饮品牌策划并执行限定款新品上市全案，联合顶流青年音乐团体进行创意开发与内容执行。',
+          },
+          {
+            type: 'project',
+            category: '餐饮 · IP联名',
+            year: '2024',
+            title: 'IP联名新品落地',
+            desc: '跨品牌IP联名项目创意策略与内容制作，联动三大全国渠道同步上市，首批售罄。',
+          },
+          {
+            type: 'project',
+            category: 'DTC · 海外社媒',
+            year: '2023',
+            title: '品牌出海内容运营',
+            desc: '消费电子、美妆及户外运动DTC品牌进入美国市场的Instagram内容策略与生产执行。',
+          },
+          { type: 'video', src: '/secornd story - final draft.mp4', caption: '品牌故事 · 纽约' },
+          { type: 'video', src: '/Profile-Shuo Cai.mp4', caption: '人物介绍 · 工作室' },
         ],
         more: '更多内容即将上线',
       },
@@ -285,20 +343,49 @@
           <span class="label">{t.work.label}</span>
           <h2 class="panel-heading">{t.work.heading}</h2>
         </div>
+
+        <!-- Featured project -->
+        <div class="work-featured">
+          <div class="work-meta-row">
+            <span class="work-tag">{t.work.featured.category}</span>
+            <span class="work-year">{t.work.featured.year}</span>
+          </div>
+          <h3 class="work-featured-title">{t.work.featured.title}</h3>
+          <p class="work-featured-desc">{t.work.featured.desc}</p>
+          <a class="work-link" href={t.work.featured.link} target="_blank" rel="noopener noreferrer">
+            {t.work.featured.linkLabel}
+          </a>
+        </div>
+
+        <!-- Project grid -->
         <div class="work-grid">
           {#each t.work.items as item}
-            <div class="work-card">
-              <video
-                class="work-video"
-                src={item.src}
-                controls
-                playsinline
-                preload="metadata"
-              >
-                <track kind="captions" />
-              </video>
-              <p class="work-caption">{item.caption}</p>
-            </div>
+            {#if item.type === 'video'}
+              <div class="work-card work-card--video">
+                <video
+                  class="work-video"
+                  src="{base}{item.src}"
+                  controls
+                  playsinline
+                  preload="metadata"
+                >
+                  <track kind="captions" />
+                </video>
+                <p class="work-caption">{item.caption}</p>
+              </div>
+            {:else}
+              <div class="work-card work-card--project">
+                <div class="work-meta-row">
+                  <span class="work-tag">{item.category}</span>
+                  <span class="work-year">{item.year}</span>
+                </div>
+                <h3 class="work-card-title">{item.title}</h3>
+                <p class="work-card-desc">{item.desc}</p>
+                {#if item.link}
+                  <a class="work-link" href={item.link} target="_blank" rel="noopener noreferrer">{item.linkLabel}</a>
+                {/if}
+              </div>
+            {/if}
           {/each}
           <div class="work-more">
             <span>{t.work.more}</span>
@@ -766,6 +853,76 @@
   }
 
   /* ===== WORK ===== */
+  .work-featured {
+    padding: 2rem 2.5rem;
+    background: var(--color-black);
+    color: var(--color-cream);
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    @include mobile {
+      padding: 1.5rem;
+    }
+  }
+
+  .work-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .work-tag {
+    font-family: var(--font-sans);
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+  }
+
+  .work-year {
+    font-family: var(--font-sans);
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+    color: rgba(247, 242, 235, 0.4);
+  }
+
+  .work-featured-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--color-cream);
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  .work-featured-desc {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    line-height: 1.65;
+    color: rgba(247, 242, 235, 0.65);
+    margin: 0;
+    max-width: 540px;
+  }
+
+  .work-link {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.58rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-gold);
+    padding-bottom: 0.15rem;
+    width: fit-content;
+    margin-top: 0.25rem;
+
+    &:hover { opacity: 0.7; }
+  }
+
   .work-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -780,8 +937,37 @@
   .work-card {
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
     background: var(--color-black);
+  }
+
+  .work-card--project {
+    padding: 1.5rem;
+    gap: 0.55rem;
+
+    .work-year { color: rgba(247, 242, 235, 0.3); }
+  }
+
+  .work-card--video {
+    gap: 0;
+  }
+
+  .work-card-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--color-cream);
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .work-card-desc {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    line-height: 1.6;
+    color: rgba(247, 242, 235, 0.6);
+    margin: 0;
+    flex: 1;
   }
 
   .work-video {
@@ -799,7 +985,7 @@
     color: var(--color-warm-gray);
     text-transform: uppercase;
     margin: 0;
-    padding: 0 0.25rem 0.5rem;
+    padding: 0.5rem 0.25rem 0.6rem;
   }
 
   .work-more {
@@ -807,7 +993,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120px;
+    height: 100px;
     border: 1px dashed rgba(0,0,0,0.12);
     background: rgba(0,0,0,0.03);
 
