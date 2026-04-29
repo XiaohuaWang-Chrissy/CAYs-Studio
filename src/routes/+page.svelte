@@ -39,7 +39,7 @@
           category: 'Social Feed · AI Brand',
           year: '2024',
           title: 'Homture × iFlytek',
-          desc: 'Social feed video production for Homture, a smart home brand developed with iFlytek. We handled scripting, shot all footage in a single day, and structured every clip to be reusable across at least two finished videos. All deliveries completed within 10 days.',
+          desc: 'Social feed video production for Homture, a smart home brand developed with iFlytek. We handled scripting, shot all footage in a single day, and structured every clip to be reusable across at least two finished videos — delivering a total of ~50 videos within 10 days. Content spans product-only films with AI integration and actor-led narratives. Four selected videos shown.',
           link: 'https://homture.com/',
           linkLabel: 'Visit Homture',
           videos: [
@@ -177,7 +177,7 @@
           category: '信息流 · AI品牌',
           year: '2024',
           title: 'Homture × 科大讯飞',
-          desc: '为科大讯飞联合开发的智能家居品牌 Homture 制作信息流视频内容。全程负责脚本撰写，一天内完成全部素材拍摄，每段素材均可复用于至少两条成品视频，所有内容在10天内完成交付。',
+          desc: '为科大讯飞联合开发的智能家居品牌 Homture 制作信息流视频内容。全程负责脚本撰写，一天内完成全部素材拍摄，每段素材可复用于至少两条成品视频，最终在10天内交付约50条视频。内容涵盖纯产品结合AI的影片与演员出镜叙事两种形式，此处展示4条精选。',
           link: 'https://homture.com/',
           linkLabel: '访问 Homture',
           videos: [
