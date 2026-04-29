@@ -258,7 +258,10 @@
   <!-- HOME -->
   {#if active === 'home'}
     <div class="panel panel--hero">
-      <div class="hero-bg"></div>
+      <video class="hero-bg" src="{base}/herovideo.mp4" autoplay muted loop playsinline>
+        <track kind="captions" />
+      </video>
+      <div class="hero-overlay"></div>
       <div class="hero-body">
         <p class="hero-loc">{t.hero.location}</p>
         <div class="hero-center">
@@ -607,7 +610,17 @@
   .hero-bg {
     position: absolute;
     inset: 0;
-    background: var(--color-black);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
   }
 
   .hero-body {

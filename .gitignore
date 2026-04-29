@@ -10,3 +10,6 @@ build/
 static/*.mp4
 static/*.mov
 static/*.webm
+
+# Hero video is tracked (28 MB, within GitHub limits)
+!static/herovideo.mp4
