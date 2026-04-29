@@ -86,7 +86,16 @@
         heading: 'Start a Project\nWith Us',
         body: 'Tell us about your project and we\'ll get back to you within 24 hours.',
         fields: { email: 'Your Email', msg: 'Tell Us About Your Project', cta: 'SEND MESSAGE' },
-        email: 'hello@caysstudio.com',
+        success: {
+          heading: 'Message Sent',
+          body: 'We\'ll be in touch within 24 hours.',
+          returning: 'Returning to site…',
+        },
+        error: {
+          heading: 'Something Went Wrong',
+          body: 'Your message could not be sent. Please try again or email us directly.',
+          returning: 'Returning to site…',
+        },
       },
       footer: {
         tagline: 'Filmmakers · Journalists · Documentarians · New York City',
@@ -176,7 +185,16 @@
         heading: '开启您的\n下一个项目',
         body: '告诉我们您的需求，我们将在24小时内回复。',
         fields: { email: '您的邮箱', msg: '项目描述', cta: '发送消息' },
-        email: 'hello@caysstudio.com',
+        success: {
+          heading: '消息已发送',
+          body: '我们将在24小时内与您联系。',
+          returning: '即将返回网站…',
+        },
+        error: {
+          heading: '发送失败',
+          body: '消息未能成功发送，请重试。',
+          returning: '即将返回网站…',
+        },
       },
       footer: {
         tagline: '电影人 · 记者 · 纪录片导演 · 纽约',
@@ -188,8 +206,27 @@
   const t = $derived(translations[lang.current]);
 
   let active = $state('home');
+  let formState = $state('idle'); // 'idle' | 'submitting' | 'success' | 'error'
 
   function go(id) { active = id; }
+
+  async function submitForm(e) {
+    e.preventDefault();
+    formState = 'submitting';
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/xiaohuaw765@gmail.com', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(e.target),
+      });
+      formState = res.ok ? 'success' : 'error';
+    } catch {
+      formState = 'error';
+    }
+    setTimeout(() => {
+      window.location.href = 'https://xiaohuawang-chrissy.github.io/CAYs-Studio/';
+    }, 3500);
+  }
 </script>
 
 <!-- ===== HEADER ===== -->
@@ -352,33 +389,45 @@
   <!-- CONTACT -->
   {#if active === 'contact'}
     <div class="panel panel--dark scrollable">
-      <div class="panel-inner">
-        <div class="section-intro">
-          <span class="label light">{t.contact.label}</span>
-          <h2 class="panel-heading light">{t.contact.heading}</h2>
-        </div>
-        <p class="contact-body">{t.contact.body}</p>
 
-        <form
-          class="contact-form"
-          action="https://formsubmit.co/xiaohuaw765@gmail.com"
-          method="POST"
-        >
-          <input type="hidden" name="_subject" value="CAY's Studio — New Inquiry" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="https://xiaohuawang-chrissy.github.io/CAYs-Studio/" />
-          <input type="hidden" name="_template" value="table" />
-          <div class="form-group">
-            <label for="email">{t.contact.fields.email}</label>
-            <input type="email" id="email" name="email" required />
+      {#if formState === 'success' || formState === 'error'}
+        <div class="form-result">
+          <div class="form-result-card" class:result--error={formState === 'error'}>
+            <p class="result-heading">
+              {formState === 'success' ? t.contact.success.heading : t.contact.error.heading}
+            </p>
+            <p class="result-body">
+              {formState === 'success' ? t.contact.success.body : t.contact.error.body}
+            </p>
+            <p class="result-returning">
+              {formState === 'success' ? t.contact.success.returning : t.contact.error.returning}
+            </p>
           </div>
-          <div class="form-group">
-            <label for="message">{t.contact.fields.msg}</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+      {:else}
+        <div class="panel-inner">
+          <div class="section-intro">
+            <span class="label light">{t.contact.label}</span>
+            <h2 class="panel-heading light">{t.contact.heading}</h2>
           </div>
-          <button type="submit" class="form-submit">{t.contact.fields.cta}</button>
-        </form>
-      </div>
+          <p class="contact-body">{t.contact.body}</p>
+
+          <form class="contact-form" onsubmit={submitForm}>
+            <input type="hidden" name="_subject" value="CAY's Studio — New Inquiry" />
+            <div class="form-group">
+              <label for="email">{t.contact.fields.email}</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">{t.contact.fields.msg}</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="form-submit" disabled={formState === 'submitting'}>
+              {formState === 'submitting' ? '…' : t.contact.fields.cta}
+            </button>
+          </form>
+        </div>
+      {/if}
 
       <footer class="panel-footer">
         <p class="footer-tagline">{t.footer.tagline}</p>
@@ -963,6 +1012,51 @@
   }
 
   /* ===== CONTACT ===== */
+  /* ===== FORM RESULT SCREEN ===== */
+  .form-result {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: var(--color-dark);
+  }
+
+  .form-result-card {
+    text-align: center;
+    max-width: 420px;
+
+    &.result--error .result-heading {
+      color: #e07070;
+    }
+  }
+
+  .result-heading {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: var(--font-weight-light);
+    color: var(--color-white);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .result-body {
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 2rem;
+  }
+
+  .result-returning {
+    font-family: var(--font-sans);
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.2);
+    text-transform: uppercase;
+    margin: 0;
+  }
+
   .contact-body {
     font-size: 0.9rem;
     line-height: 1.8;
