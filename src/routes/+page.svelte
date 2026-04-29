@@ -35,31 +35,43 @@
       work: {
         label: 'OUR WORK',
         heading: 'Selected Projects',
-        featured: {
-          category: 'Brand Campaign · Beauty',
-          year: '2022',
-          title: 'Spring Campaign',
-          desc: 'Full-cycle campaign production for a leading global beauty brand — concept development, on-set direction, and After Effects post-production for a seasonal product launch.',
-          link: 'https://www.youtube.com/watch?v=5YVKqj5TeQA',
-          linkLabel: 'Watch Film',
+        homture: {
+          category: 'Social Feed · AI Brand',
+          year: '2024',
+          title: 'Homture × iFlytek',
+          desc: 'Social feed video production for Homture, a smart home product brand developed in partnership with iFlytek. Full-service production from scripting through delivery — formatted for social platforms.',
+          link: 'https://homture.com/',
+          linkLabel: 'Visit Homture',
+          videos: [
+            '/homture1.mp4',
+            '/homture2.mp4',
+            '/homture3.mp4',
+            '/homture4.mp4',
+          ],
         },
-        items: [
+        brandLabel: 'BRAND CASES',
+        brands: [
           {
-            type: 'project',
+            category: 'Brand Campaign · Beauty',
+            year: '2022',
+            title: 'Spring Campaign',
+            desc: 'Full-cycle campaign production for a leading global beauty brand — concept, on-set direction, and post-production for a seasonal product launch.',
+            link: 'https://www.youtube.com/watch?v=5YVKqj5TeQA',
+            linkLabel: 'Watch Film',
+          },
+          {
             category: 'F&B · Social Campaign',
             year: '2023',
             title: 'Limited Edition Launch',
-            desc: 'Campaign strategy and creative execution for a major F&B chain\'s limited-edition product, developed in collaboration with a top youth entertainment group.',
+            desc: 'Campaign strategy and creative execution for a major F&B chain\'s limited-edition product, developed with a top youth entertainment group.',
           },
           {
-            type: 'project',
             category: 'F&B · IP Collaboration',
             year: '2024',
             title: 'Cross-Brand IP Campaign',
-            desc: 'Creative strategy and content production for a cross-brand IP collaboration, coordinated across three national sales channels — sold out at launch.',
+            desc: 'Creative strategy and content production for a cross-brand IP collaboration across three national sales channels — sold out at launch.',
           },
           {
-            type: 'project',
             category: 'DTC · Social Content',
             year: '2023',
             title: 'U.S. Market Entry Content',
@@ -161,31 +173,43 @@
       work: {
         label: '作品展示',
         heading: '精选案例',
-        featured: {
-          category: '品牌大片 · 美妆',
-          year: '2022',
-          title: '春季营销大片',
-          desc: '为全球头部美妆品牌提供春季新品大片全流程制作——涵盖创意概念、现场执导与后期合成。',
-          link: 'https://www.youtube.com/watch?v=5YVKqj5TeQA',
-          linkLabel: '观看影片',
+        homture: {
+          category: '信息流 · AI品牌',
+          year: '2024',
+          title: 'Homture × 科大讯飞',
+          desc: '为与科大讯飞联合开发的智能家居品牌 Homture 制作信息流视频内容，从脚本创作到交付全流程执行，内容格式适配社交媒体平台传播。',
+          link: 'https://homture.com/',
+          linkLabel: '访问 Homture',
+          videos: [
+            '/homture1.mp4',
+            '/homture2.mp4',
+            '/homture3.mp4',
+            '/homture4.mp4',
+          ],
         },
-        items: [
+        brandLabel: '品牌案例',
+        brands: [
           {
-            type: 'project',
+            category: '品牌大片 · 美妆',
+            year: '2022',
+            title: '春季营销大片',
+            desc: '为全球头部美妆品牌提供春季新品大片全流程制作——创意概念、现场执导与后期合成。',
+            link: 'https://www.youtube.com/watch?v=5YVKqj5TeQA',
+            linkLabel: '观看影片',
+          },
+          {
             category: '餐饮 · 社交营销',
             year: '2023',
             title: '限定新品上市',
-            desc: '为头部餐饮品牌策划并执行限定款新品上市全案，联合顶流青年音乐团体进行创意开发与内容执行。',
+            desc: '为头部餐饮品牌策划并执行限定款新品上市全案，联合顶流青年音乐团体进行创意开发。',
           },
           {
-            type: 'project',
             category: '餐饮 · IP联名',
             year: '2024',
             title: 'IP联名新品落地',
             desc: '跨品牌IP联名项目创意策略与内容制作，联动三大全国渠道同步上市，首批售罄。',
           },
           {
-            type: 'project',
             category: 'DTC · 海外社媒',
             year: '2023',
             title: '品牌出海内容运营',
@@ -340,48 +364,49 @@
           <h2 class="panel-heading">{t.work.heading}</h2>
         </div>
 
-        <!-- Featured project -->
+        <!-- Homture featured project -->
         <div class="work-featured">
           <div class="work-meta-row">
-            <span class="work-tag">{t.work.featured.category}</span>
-            <span class="work-year">{t.work.featured.year}</span>
+            <span class="work-tag">{t.work.homture.category}</span>
+            <span class="work-year">{t.work.homture.year}</span>
           </div>
-          <h3 class="work-featured-title">{t.work.featured.title}</h3>
-          <p class="work-featured-desc">{t.work.featured.desc}</p>
-          <a class="work-link" href={t.work.featured.link} target="_blank" rel="noopener noreferrer">
-            {t.work.featured.linkLabel}
+          <h3 class="work-featured-title">{t.work.homture.title}</h3>
+          <p class="work-featured-desc">{t.work.homture.desc}</p>
+          <a class="work-link" href={t.work.homture.link} target="_blank" rel="noopener noreferrer">
+            {t.work.homture.linkLabel}
           </a>
+          <div class="homture-grid">
+            {#each t.work.homture.videos as src}
+              <video
+                class="homture-video"
+                src="{base}{src}"
+                controls
+                playsinline
+                preload="metadata"
+              >
+                <track kind="captions" />
+              </video>
+            {/each}
+          </div>
         </div>
 
-        <!-- Project grid -->
+        <!-- Brand cases -->
+        <div class="brand-section-label">
+          <span class="label">{t.work.brandLabel}</span>
+        </div>
         <div class="work-grid">
-          {#each t.work.items as item}
-            {#if item.type === 'video'}
-              <div class="work-card work-card--video">
-                <video
-                  class="work-video"
-                  src="{base}{item.src}"
-                  controls
-                  playsinline
-                  preload="metadata"
-                >
-                  <track kind="captions" />
-                </video>
-                <p class="work-caption">{item.caption}</p>
+          {#each t.work.brands as item}
+            <div class="work-card work-card--project">
+              <div class="work-meta-row">
+                <span class="work-tag">{item.category}</span>
+                <span class="work-year">{item.year}</span>
               </div>
-            {:else}
-              <div class="work-card work-card--project">
-                <div class="work-meta-row">
-                  <span class="work-tag">{item.category}</span>
-                  <span class="work-year">{item.year}</span>
-                </div>
-                <h3 class="work-card-title">{item.title}</h3>
-                <p class="work-card-desc">{item.desc}</p>
-                {#if item.link}
-                  <a class="work-link" href={item.link} target="_blank" rel="noopener noreferrer">{item.linkLabel}</a>
-                {/if}
-              </div>
-            {/if}
+              <h3 class="work-card-title">{item.title}</h3>
+              <p class="work-card-desc">{item.desc}</p>
+              {#if item.link}
+                <a class="work-link" href={item.link} target="_blank" rel="noopener noreferrer">{item.linkLabel}</a>
+              {/if}
+            </div>
           {/each}
           <div class="work-more">
             <span>{t.work.more}</span>
@@ -943,8 +968,33 @@
     .work-year { color: rgba(247, 242, 235, 0.3); }
   }
 
-  .work-card--video {
-    gap: 0;
+  .homture-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.4rem;
+    }
+  }
+
+  .homture-video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    display: block;
+    object-fit: cover;
+    background: #1a1a1a;
+  }
+
+  .brand-section-label {
+    margin-bottom: 1rem;
+    padding-top: 0.25rem;
   }
 
   .work-card-title {
@@ -964,24 +1014,6 @@
     color: rgba(247, 242, 235, 0.6);
     margin: 0;
     flex: 1;
-  }
-
-  .work-video {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    display: block;
-    object-fit: cover;
-    background: var(--color-dark-mid);
-  }
-
-  .work-caption {
-    font-family: var(--font-sans);
-    font-size: 0.6rem;
-    letter-spacing: 0.18em;
-    color: var(--color-warm-gray);
-    text-transform: uppercase;
-    margin: 0;
-    padding: 0.5rem 0.25rem 0.6rem;
   }
 
   .work-more {

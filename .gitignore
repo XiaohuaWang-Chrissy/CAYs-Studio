@@ -11,5 +11,9 @@ static/*.mp4
 static/*.mov
 static/*.webm
 
-# Hero video is tracked (28 MB, within GitHub limits)
+# Hero video and Homture campaign videos are tracked (all within GitHub limits)
 !static/herovideo.mp4
+!static/homture1.mp4
+!static/homture2.mp4
+!static/homture3.mp4
+!static/homture4.mp4
