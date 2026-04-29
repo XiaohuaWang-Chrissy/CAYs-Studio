@@ -56,26 +56,27 @@
             year: '2022',
             title: 'Spring Campaign',
             desc: 'Full-cycle campaign production for a leading global beauty brand — concept, on-set direction, and post-production for a seasonal product launch.',
+            detail: 'Handled motion graphics and After Effects compositing in-house. The campaign ran as the brand\'s primary seasonal activation across digital channels.',
             link: 'https://www.youtube.com/watch?v=5YVKqj5TeQA',
             linkLabel: 'Watch Film',
-          },
-          {
-            category: 'F&B · Social Campaign',
-            year: '2023',
-            title: 'Limited Edition Launch',
-            desc: 'Campaign strategy and creative execution for a major F&B chain\'s limited-edition product, developed with a top youth entertainment group.',
           },
           {
             category: 'F&B · IP Collaboration',
             year: '2024',
             title: 'Cross-Brand IP Campaign',
             desc: 'Creative strategy and content production for a cross-brand IP collaboration across three national sales channels — sold out at launch.',
+            detail: 'Covered creative concept, content production, and coordinated rollout across in-store, delivery, and e-commerce channels simultaneously.',
+            link: 'http://xhslink.com/o/2chBM4YvVpN',
+            linkLabel: 'View on Xiaohongshu',
           },
           {
             category: 'DTC · Social Content',
             year: '2023',
             title: 'U.S. Market Entry Content',
             desc: 'Instagram content strategy and production for DTC brands in consumer electronics, beauty accessories, and outdoor sports entering the U.S. market.',
+            detail: 'Built brand accounts from zero across three product categories: @egretech.usa (power banks), @byootique (beauty accessories), @lefeet.official (underwater scooters). Covered strategy, production, and posting.',
+            link: 'https://www.instagram.com/byootique/',
+            linkLabel: 'View @byootique',
           },
         ],
         more: 'More projects coming soon',
@@ -194,26 +195,27 @@
             year: '2022',
             title: '春季营销大片',
             desc: '为全球头部美妆品牌提供春季新品大片全流程制作——创意概念、现场执导与后期合成。',
+            detail: '动态图形与After Effects合成均由团队内部完成。该大片作为品牌当季主视觉内容在全数字渠道铺开。',
             link: 'https://www.youtube.com/watch?v=5YVKqj5TeQA',
             linkLabel: '观看影片',
-          },
-          {
-            category: '餐饮 · 社交营销',
-            year: '2023',
-            title: '限定新品上市',
-            desc: '为头部餐饮品牌策划并执行限定款新品上市全案，联合顶流青年音乐团体进行创意开发。',
           },
           {
             category: '餐饮 · IP联名',
             year: '2024',
             title: 'IP联名新品落地',
             desc: '跨品牌IP联名项目创意策略与内容制作，联动三大全国渠道同步上市，首批售罄。',
+            detail: '涵盖创意概念、内容制作，以及到店、外卖、电商三大渠道的同步上线统筹。',
+            link: 'http://xhslink.com/o/2chBM4YvVpN',
+            linkLabel: '在小红书查看',
           },
           {
             category: 'DTC · 海外社媒',
             year: '2023',
             title: '品牌出海内容运营',
             desc: '消费电子、美妆及户外运动DTC品牌进入美国市场的Instagram内容策略与生产执行。',
+            detail: '从零搭建三个品牌账号：@egretech.usa（充电宝）、@byootique（美妆收纳）、@lefeet.official（水下助推器），覆盖策略、拍摄、剪辑与发布。',
+            link: 'https://www.instagram.com/byootique/',
+            linkLabel: '查看 @byootique',
           },
         ],
         more: '更多内容即将上线',
@@ -285,6 +287,7 @@
 
   let active = $state('home');
   let formState = $state('idle'); // 'idle' | 'submitting' | 'success' | 'error'
+  let expandedBrand = $state(null);
 
   function go(id) { active = id; }
 
@@ -395,16 +398,35 @@
           <span class="label">{t.work.brandLabel}</span>
         </div>
         <div class="work-grid">
-          {#each t.work.brands as item}
-            <div class="work-card work-card--project">
+          {#each t.work.brands as item, i}
+            <div
+              class="work-card work-card--project"
+              class:is-expanded={expandedBrand === i}
+              role="button"
+              tabindex="0"
+              onclick={() => expandedBrand = expandedBrand === i ? null : i}
+              onkeydown={(e) => e.key === 'Enter' && (expandedBrand = expandedBrand === i ? null : i)}
+            >
               <div class="work-meta-row">
                 <span class="work-tag">{item.category}</span>
                 <span class="work-year">{item.year}</span>
+                <span class="work-toggle">{expandedBrand === i ? '×' : '+'}</span>
               </div>
               <h3 class="work-card-title">{item.title}</h3>
               <p class="work-card-desc">{item.desc}</p>
-              {#if item.link}
-                <a class="work-link" href={item.link} target="_blank" rel="noopener noreferrer">{item.linkLabel}</a>
+              {#if expandedBrand === i}
+                {#if item.detail}
+                  <p class="work-card-detail">{item.detail}</p>
+                {/if}
+                {#if item.link}
+                  <a
+                    class="work-link"
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onclick={(e) => e.stopPropagation()}
+                  >{item.linkLabel}</a>
+                {/if}
               {/if}
             </div>
           {/each}
@@ -964,8 +986,32 @@
   .work-card--project {
     padding: 1.5rem;
     gap: 0.55rem;
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &:hover { background: #1a1a1a; }
+    &.is-expanded { background: #1a1a1a; }
 
     .work-year { color: rgba(247, 242, 235, 0.3); }
+  }
+
+  .work-toggle {
+    margin-left: auto;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: rgba(247, 242, 235, 0.5);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .work-card-detail {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    line-height: 1.6;
+    color: rgba(247, 242, 235, 0.45);
+    margin: 0;
+    padding-top: 0.25rem;
+    border-top: 1px solid rgba(247, 242, 235, 0.08);
   }
 
   .homture-grid {
