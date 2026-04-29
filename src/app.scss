@@ -1,6 +1,6 @@
 @use '$lib/styles' as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
   --color-black: #080808;
@@ -19,7 +19,7 @@
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-chinese: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-chinese: 'Noto Serif SC', 'PingFang SC', serif;
 
   --font-size-root: 16px;
   --font-size-xs: 0.6875rem;
@@ -145,4 +145,10 @@ button {
     --spacing-xl: 2.5rem;
     --spacing-xxl: 4rem;
   }
+}
+
+/* ===== CHINESE FONT OVERRIDE ===== */
+:lang(zh) {
+  --font-display: 'Noto Serif SC', 'PingFang SC', serif;
+  --font-sans: 'Noto Serif SC', 'PingFang SC', serif;
 }

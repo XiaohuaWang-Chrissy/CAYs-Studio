@@ -15,8 +15,14 @@ Use it for headers, footers, and navigation that appear on all pages.
   // Access page-level settings (from +page.js)
   import { page } from '$app/state';
 
+  import { lang } from '$lib/stores/lang.svelte.js';
+
   // In Svelte 5, we use $props() to receive the page content
   let { children } = $props();
+
+  $effect(() => {
+    document.documentElement.lang = lang.current === 'zh' ? 'zh' : 'en';
+  });
 </script>
 
 {#if page.data.showHeader !== false}
