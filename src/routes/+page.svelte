@@ -365,7 +365,7 @@
     }
     setTimeout(() => {
       window.location.href =
-        'https://xiaohuawang-chrissy.github.io/CAYs-Studio/';
+        'https://caystudio.work/';
     }, 3500);
   }
 </script>
