@@ -1,25 +1,40 @@
 @use '$lib/styles' as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 :root {
   --color-black: #080808;
   --color-dark: #111111;
-  --color-dark-mid: #1C1C1C;
-  --color-cream: #F7F2EB;
-  --color-cream-dark: #EDE6DC;
-  --color-warm-gray: #8C8078;
-  --color-gold: #B89A70;
-  --color-gold-light: #D4B896;
-  --color-white: #FFFFFF;
-  --color-text: #1C1C1C;
-  --color-text-muted: #7A7570;
+  --color-dark-mid: #1c1c1c;
+  --color-cream: #f7f2eb;
+  --color-cream-dark: #ede6dc;
+  --color-warm-gray: #8c8078;
+  --color-gold: #b89a70;
+  --color-gold-light: #d4b896;
+  --color-white: #ffffff;
+  --color-text: #1c1c1c;
+  --color-text-muted: #7a7570;
   --color-border-light: rgba(255, 255, 255, 0.2);
   --color-border-dark: rgba(0, 0, 0, 0.1);
 
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-chinese: 'Noto Serif SC', 'PingFang SC', serif;
+  /* Studio theme: pop cyberpunk */
+  --color-ink: #0b0b10;
+  --color-ink-raised: #15151d;
+  --color-ink-line: rgba(255, 255, 255, 0.12);
+  --color-ink-grid: rgba(255, 255, 255, 0.045);
+  --color-fg: #f2f2f7;
+  --color-fg-muted: #a0a0b4;
+  --color-neon-pink: #ff2e88;
+  --color-neon-cyan: #00e5ff;
+  --color-acid: #e4ff1a;
+  --shadow-pop-pink: 6px 6px 0 var(--color-neon-pink);
+  --shadow-pop-cyan: 6px 6px 0 var(--color-neon-cyan);
+
+  --font-display:
+    'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-chinese: 'Noto Sans SC', 'PingFang SC', sans-serif;
 
   --font-size-root: 16px;
   --font-size-xs: 0.6875rem;
@@ -91,7 +106,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   font-weight: var(--font-weight-light);
   line-height: var(--leading-tight);
@@ -149,6 +169,7 @@ button {
 
 /* ===== CHINESE FONT OVERRIDE ===== */
 :lang(zh) {
-  --font-display: 'Noto Serif SC', 'PingFang SC', serif;
-  --font-sans: 'Noto Serif SC', 'PingFang SC', serif;
+  --font-display: 'Noto Sans SC', 'PingFang SC', sans-serif;
+  --font-sans: 'Noto Sans SC', 'PingFang SC', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Noto Sans SC', 'PingFang SC', monospace;
 }

@@ -209,6 +209,27 @@ Defined in `src/app.scss` — import with `var(--token-name)`.
   </tbody>
 </table>
 
+### Studio Theme (Pop Cyberpunk)
+
+Dark base with two neon accents and one acid highlight. Used by the main site in `src/routes/+page.svelte`.
+
+| Swatch                                                                                                                                          | Token                | Value                        | Usage                                                  |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | ---------------------------- | ------------------------------------------------------ |
+| <span style={{ display: 'inline-block', width: '32px', height: '32px', background: '#0b0b10', border: '1px solid #ccc' }} />                    | `--color-ink`        | `#0b0b10`                    | Base background of every panel and the header          |
+| <span style={{ display: 'inline-block', width: '32px', height: '32px', background: '#15151d', border: '1px solid #ccc' }} />                    | `--color-ink-raised` | `#15151d`                    | Raised surfaces: dialog, form inputs, About card       |
+| <span style={{ display: 'inline-block', width: '32px', height: '32px', background: 'rgba(255, 255, 255, 0.12)', border: '1px solid #ccc' }} />  | `--color-ink-line`   | `rgba(255, 255, 255, 0.12)`  | Hairline borders on dark surfaces                      |
+| <span style={{ display: 'inline-block', width: '32px', height: '32px', background: 'rgba(255, 255, 255, 0.045)', border: '1px solid #ccc' }} /> | `--color-ink-grid`   | `rgba(255, 255, 255, 0.045)` | Faint blueprint grid behind content panels             |
+| <span style={{ display: 'inline-block', width: '32px', height: '32px', background: '#f2f2f7', border: '1px solid #ccc' }} />                    | `--color-fg`         | `#f2f2f7`                    | Primary text on dark                                   |
+| <span style={{ display: 'inline-block', width: '32px', height: '32px', background: '#a0a0b4', border: '1px solid #ccc' }} />                    | `--color-fg-muted`   | `#a0a0b4`                    | Secondary text on dark                                 |
+| <span style={{ display: 'inline-block', width: '32px', height: '32px', background: '#ff2e88', border: '1px solid #ccc' }} />                    | `--color-neon-pink`  | `#ff2e88`                    | Primary accent: labels, active tab, links, pop shadows |
+| <span style={{ display: 'inline-block', width: '32px', height: '32px', background: '#00e5ff', border: '1px solid #ccc' }} />                    | `--color-neon-cyan`  | `#00e5ff`                    | Secondary accent: tags, roles, form labels, focus      |
+| <span style={{ display: 'inline-block', width: '32px', height: '32px', background: '#e4ff1a', border: '1px solid #ccc' }} />                    | `--color-acid`       | `#e4ff1a`                    | Call-to-action fill, stats, highlights                 |
+
+| Token               | Value                              | Usage                                                              |
+| ------------------- | ---------------------------------- | ------------------------------------------------------------------ |
+| `--shadow-pop-pink` | `6px 6px 0 var(--color-neon-pink)` | Hard offset "pop" shadow on primary buttons and hovered work cards |
+| `--shadow-pop-cyan` | `6px 6px 0 var(--color-neon-cyan)` | Hard offset shadow on secondary buttons and hovered team photos    |
+
 ### CUNY Blue Gradient Colors
 
 <table
@@ -285,10 +306,14 @@ Defined in `src/app.scss` — import with `var(--token-name)`.
 
 ### Font Families
 
-| Token          | Value                                                                                                 | Usage                |
-| -------------- | ----------------------------------------------------------------------------------------------------- | -------------------- |
-| `--font-serif` | `'PT Serif', Georgia, 'Times New Roman', Times, serif`                                                | Headings (`h1`–`h6`) |
-| `--font-sans`  | `'Droid Sans', system-ui, sans-serif, ...` _(abbreviated; see `src/app.scss` for full fallback list)_ | Body text, UI labels |
+| Token            | Value                                                            | Usage                                     |
+| ---------------- | ---------------------------------------------------------------- | ----------------------------------------- |
+| `--font-display` | `'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif` | Headings, titles, logo                    |
+| `--font-sans`    | `'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif` | Body text                                 |
+| `--font-mono`    | `'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace`    | Labels, tags, buttons, nav (terminal/HUD) |
+| `--font-chinese` | `'Noto Sans SC', 'PingFang SC', sans-serif`                      | Chinese text                              |
+
+On `:lang(zh)`, `--font-display` and `--font-sans` switch to Noto Sans SC, and `--font-mono` falls back to Noto Sans SC for Chinese characters.
 
 ### Root Font Sizes
 

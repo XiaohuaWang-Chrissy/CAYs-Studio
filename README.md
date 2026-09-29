@@ -42,7 +42,6 @@ src/
 
 static/
 ├── Chrissy.JPG                 # Team photo
-├── Yvonne.JPG                  # Team photo
 ├── secornd story - final draft.mp4   # Work sample video
 └── Profile-Shuo Cai.mp4              # Work sample video
 ```
@@ -105,11 +104,10 @@ Add a new video file to `static/`, then add an entry to the `work.items` array i
 
 ## Founders
 
-| Name    | Role                    |
-|---------|-------------------------|
-| Chrissy | Co-Founder · Creative Director |
-| Yvonne  | Co-Founder · Producer   |
-| Alexa   | Co-Founder · Strategist *(photo pending)* |
+| Name    | Role                                      |
+| ------- | ----------------------------------------- |
+| Chrissy | Co-Founder · Creative Director            |
+| Alexa   | Co-Founder · Strategist _(photo pending)_ |
 
 ---
 

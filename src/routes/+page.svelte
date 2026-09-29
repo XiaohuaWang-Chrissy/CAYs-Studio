@@ -5,114 +5,125 @@
   const translations = {
     en: {
       tabs: [
-        { id: 'home',    label: 'HOME' },
-        { id: 'work',    label: 'WORK' },
-        { id: 'about',   label: 'ABOUT' },
-        { id: 'team',    label: 'TEAM' },
+        { id: 'home', label: 'HOME' },
+        { id: 'work', label: 'WORK' },
+        { id: 'team', label: 'TEAM' },
         { id: 'contact', label: 'CONTACT' },
       ],
       hero: {
-        location: 'BASE IN NYC',
-        sub: 'Filmmakers · Journalists · Documentarians',
+        location: 'BASED IN NYC',
+        sub: "Your product's first step from zero to viral",
         cta1: 'SEE OUR WORK',
         cta2: 'GET A QUOTE',
       },
       about: {
         label: 'WHO WE ARE',
-        heading: 'Film. Journalism.\nDocumentary.',
-        body: 'CAY\'s Studio is a New York-based content studio founded by professional filmmakers, journalists, and documentary directors. We produce social media video content for Chinese brands in global markets.\n\nOur background shapes how we work — with attention to visual quality, clear and considered writing, and an understanding of how stories move on social platforms.',
-        statsLabel: ['Years of Experience', 'Response Time'],
-        statsVal: ['5+', '24h'],
-        servLabel: 'WHAT WE DO',
-        servHeading: 'What We\nOffer',
-        items: [
-          { num: '01', title: 'Video Production', desc: 'Full-service production from scripting and pre-production through shoot, edit, and delivery. Handled by a professional film crew.' },
-          { num: '02', title: 'Copywriting & Scripting', desc: 'Scripts and copy written by journalists — clear, direct, and suited to how people actually watch video online.' },
-          { num: '03', title: 'Documentary-Style Content', desc: 'Story-led content grounded in real people and situations, for brands that want to communicate authentically.' },
-          { num: '04', title: 'Platform Strategy', desc: 'Content formatted and tailored for TikTok, Instagram Reels, and YouTube Shorts, with an understanding of each platform\'s audience.' },
+        body: "CAY's Studio is a New York-based content studio founded by filmmakers, journalists, and documentary directors. We make social video for Chinese brands going global — with a filmmaker's eye for visuals, a journalist's ear for writing, and a clear sense of how stories travel on social platforms.",
+        services: [
+          'Video Production',
+          'Copywriting & Scripting',
+          'Documentary-Style Content',
+          'Platform Strategy',
+        ],
+        stats: [
+          { value: '5+', label: 'Years of Experience' },
+          { value: '24h', label: 'Response Time' },
         ],
       },
       work: {
         label: 'OUR WORK',
-        heading: 'Selected Projects',
-        homture: {
-          category: 'Social Feed · AI Brand',
-          year: '2024',
-          title: 'Homture × iFlytek',
-          desc: 'Social feed video production for Homture, a smart home brand developed with iFlytek. We handled scripting, shot all footage in a single day, and structured every clip to be reusable across at least two finished videos — delivering a total of ~50 videos within 10 days. Content spans product-only films with AI integration and actor-led narratives. Four selected videos shown.',
-          link: 'https://homture.com/',
-          linkLabel: 'Visit Homture',
-          videos: [
-            '/homture1.mp4',
-            '/homture2.mp4',
-            '/homture3.mp4',
-            '/homture4.mp4',
-          ],
-        },
-        brandLabel: 'BRAND CASES',
-        brands: [
+        heading: 'Sample Projects',
+        intro:
+          'From script to screen, we handle it all — scripting, creator casting, filming, and editing.',
+        videos: 'sample videos',
+        open: 'View project',
+        close: 'Close',
+        projects: [
           {
-            category: 'Brand Campaign · Beauty',
-            year: '2022',
-            title: 'Spring Campaign',
-            desc: 'Full-cycle campaign production for a leading global beauty brand — concept, on-set direction, and post-production for a seasonal product launch.',
-            detail: 'Handled motion graphics and After Effects compositing in-house. The campaign ran as the brand\'s primary seasonal activation across digital channels.',
-            link: 'https://www.youtube.com/watch?v=5YVKqj5TeQA',
-            linkLabel: 'Watch Film',
+            category: 'TikTok Promote · Creator 1',
+            year: '2026',
+            title: 'TikTok Promote — Creator 1',
+            preview: 'tiktok-male',
+            desc: "In-app ads for TikTok's Promote feature, fronted by a creator. Shot on the streets of New York, each video pairs talk-to-camera storytelling with motion graphics and in-app screen walkthroughs, breaking Promote down into three simple steps to grow views and followers. Four videos shown.",
+            videos: [
+              '/tiktok-male1.mp4',
+              '/tiktok-male2.mp4',
+              '/tiktok-male3.mp4',
+              '/tiktok-male4.mp4',
+            ],
           },
           {
-            category: 'F&B · IP Collaboration',
-            year: '2024',
-            title: 'Cross-Brand IP Campaign',
-            desc: 'Creative strategy and content production for a cross-brand IP collaboration across three national sales channels — sold out at launch.',
-            detail: 'Covered creative concept, content production, and coordinated rollout across in-store, delivery, and e-commerce channels simultaneously.',
-            link: 'http://xhslink.com/o/2chBM4YvVpN',
-            linkLabel: 'View on Xiaohongshu',
+            category: 'TikTok Promote · Creator 2',
+            year: '2026',
+            title: 'TikTok Promote — Creator 2',
+            preview: 'tiktok-female',
+            desc: "In-app ads for TikTok's Promote feature, fronted by a creator. A mix of street vlogs, short skits, and in-app screen walkthroughs, showing how anyone can boost a video and grow their audience with no big budget needed. Four videos shown.",
+            videos: [
+              '/tiktok-female1.mp4',
+              '/tiktok-female2.mp4',
+              '/tiktok-female3.mp4',
+              '/tiktok-female4.mp4',
+            ],
           },
           {
-            category: 'DTC · Social Content',
-            year: '2023',
-            title: 'U.S. Market Entry Content',
-            desc: 'Instagram content strategy and production for DTC brands in consumer electronics, beauty accessories, and outdoor sports entering the U.S. market.',
-            detail: 'Built brand accounts from zero across three product categories: @egretech.usa (power banks), @byootique (beauty accessories), @lefeet.official (underwater scooters). Covered strategy, production, and posting.',
-            link: 'https://www.instagram.com/byootique/',
-            linkLabel: 'View @byootique',
+            category: 'Creator Ad · Smart Lighting',
+            year: '2026',
+            title: 'Lepro · Creator Ads',
+            preview: 'lepro',
+            desc: 'Creator-led product ads for Lepro, a smart lighting brand — the W1 AI Smart RGB Wall Lights and the LED pen flashlight. Each video is a hands-on, talk-to-camera review shot in a native creator format: unboxing, real-use scenarios at home, and a direct call to action. Two videos shown.',
+            videos: ['/flashlight1.mp4', '/flashlight2.mp4'],
+          },
+          {
+            category: 'Social Feed · AI Brand',
+            year: '2025',
+            title: 'Homture × iFlytek',
+            preview: 'homture',
+            desc: 'Social feed video production for Homture, a smart home brand developed with iFlytek. We handled scripting, shot all footage in a single day, and structured every clip to be reusable across at least two finished videos — delivering a total of ~50 videos within 10 days. Content spans product-only films with AI integration and actor-led narratives. Four selected videos shown.',
+            link: 'https://homture.com/',
+            linkLabel: 'Visit Homture',
+            videos: [
+              '/homture1.mp4',
+              '/homture2.mp4',
+              '/homture3.mp4',
+              '/homture4.mp4',
+            ],
           },
         ],
-        more: 'More projects coming soon',
+        more: {
+          body: "Want to see work in your category? Tell us about your product and we'll send you a sample video matched to it.",
+          cta: 'Request a sample video',
+        },
       },
       team: {
         label: 'OUR TEAM',
         heading: 'The Team',
-        intro: 'A team of filmmakers, journalists, documentary directors, and a visual art director.',
+        intro:
+          'A team of filmmakers, journalists, documentary directors, and a visual art director.',
         members: [
           {
             name: 'Chrissy Wang',
             role: 'Co-Founder · Filmmaker & Creative Director',
-            bio: 'Documentary producer and motion graphics designer with a background in data journalism. Leads creative direction and visual storytelling across social content production.',
             photo: '/Chrissy.JPG',
-            website: 'https://xiaohuawang-chrissy.github.io/my-static-site-personal/',
+            website:
+              'https://xiaohuawang-chrissy.github.io/my-static-site-personal/',
           },
           {
             name: 'Alexa Ge',
             role: 'Co-Founder · Documentary Filmmaker',
-            bio: 'Brand strategist and video producer with experience in FMCG campaigns, social content, and U.S. market entry for Chinese brands.',
             photo: '/Alexa.JPG',
             photoScale: 1.35,
             website: '/Alexa Portfolio 2026.pdf',
             websiteLabel: 'View Portfolio',
           },
           {
-            name: 'Yvonne Liu',
-            role: 'Co-Founder · Journalist & Producer',
-            bio: 'Writer and designer with a background in journalism, photography, and visual storytelling. Handles scripting, content strategy, and production coordination.',
-            photo: '/Yvonne.JPG',
-            website: 'https://www.yv1-1onne.com/',
+            name: 'Chloe Chi',
+            role: 'Marketing Strategist',
+            photo: '/Chloe.jpg',
+            website: 'https://chcportfolio.cargo.site/',
           },
           {
             name: 'Jade Sun',
             role: 'Art Director',
-            bio: 'Visual artist working across photography, graphic design, and moving image. Shapes the visual identity and aesthetic direction of content.',
             photo: '/Jade.jpg',
             photoScale: true,
             website: 'https://www.jadesun.art/',
@@ -124,11 +135,15 @@
       contact: {
         label: 'GET IN TOUCH',
         heading: 'Start a Project\nWith Us',
-        body: 'Tell us about your project and we\'ll get back to you within 24 hours.',
-        fields: { email: 'Your Email', msg: 'Tell Us About Your Project', cta: 'SEND MESSAGE' },
+        body: "Tell us about your project and we'll get back to you within 24 hours.",
+        fields: {
+          email: 'Your Email',
+          msg: 'Tell Us About Your Project',
+          cta: 'SEND MESSAGE',
+        },
         success: {
           heading: 'Message Sent',
-          body: 'We\'ll be in touch within 24 hours.',
+          body: "We'll be in touch within 24 hours.",
           returning: 'Returning to site…',
         },
         error: {
@@ -138,87 +153,94 @@
         },
       },
       footer: {
-        tagline: 'Filmmakers · Journalists · Documentarians · New York City',
-        copy: '© 2025 CAY\'s Studio',
+        tagline: 'New York City',
+        copy: "© 2026 CAY's Studio",
       },
     },
     zh: {
       tabs: [
-        { id: 'home',    label: '首页' },
-        { id: 'work',    label: '作品' },
-        { id: 'about',   label: '关于' },
-        { id: 'team',    label: '团队' },
+        { id: 'home', label: '首页' },
+        { id: 'work', label: '作品' },
+        { id: 'team', label: '团队' },
         { id: 'contact', label: '联系' },
       ],
       hero: {
         location: '纽约工作室',
-        sub: '电影人 · 记者 · 纪录片导演',
+        sub: '你的商品、品牌与功能，从 0 到 1 打造爆款的第一步',
         cta1: '查看作品',
         cta2: '免费报价',
       },
       about: {
         label: '关于我们',
-        heading: '电影、新闻\n与纪录片',
-        body: 'CAY\'s Studio 由电影制作人、记者与纪录片导演共同创立，工作室总部位于纽约。我们专注于为中国品牌出海提供信息流视频内容制作。\n\n我们的创作背景体现在工作方式上：注重视觉质量，文案清晰有逻辑，对内容在社交平台上的传播方式有实际的理解和经验。',
-        statsLabel: ['从业年限', '响应时间'],
-        statsVal: ['5+', '24h'],
-        servLabel: '服务内容',
-        servHeading: '我们提供\n什么',
-        items: [
-          { num: '01', title: '视频制作', desc: '从脚本、拍摄到剪辑交付的全流程制作，由专业影视团队执行。' },
-          { num: '02', title: '文案与脚本', desc: '由记者背景的团队负责撰写，文字清晰、直接，符合视频内容的实际观看习惯。' },
-          { num: '03', title: '纪录片风格内容', desc: '以真实人物和场景为基础的故事型内容，适合希望以真实感进行品牌沟通的客户。' },
-          { num: '04', title: '平台内容策略', desc: '针对TikTok、Instagram Reels、YouTube Shorts进行内容适配，结合对各平台用户习惯的理解。' },
+        body: "CAY's Studio 由电影人、记者与纪录片导演在纽约共同创立，专注为中国品牌出海制作社媒视频内容——以电影人的视觉标准、记者的文字功底，以及对社交平台传播方式的实际理解来创作。",
+        services: ['视频制作', '文案与脚本', '纪录片风格内容', '平台内容策略'],
+        stats: [
+          { value: '5+', label: '从业年限' },
+          { value: '24h', label: '响应时间' },
         ],
       },
       work: {
         label: '作品展示',
-        heading: '精选案例',
-        homture: {
-          category: '信息流 · AI品牌',
-          year: '2024',
-          title: 'Homture × 科大讯飞',
-          desc: '为科大讯飞联合开发的智能家居品牌 Homture 制作信息流视频内容。全程负责脚本撰写，一天内完成全部素材拍摄，每段素材可复用于至少两条成品视频，最终在10天内交付约50条视频。内容涵盖纯产品结合AI的影片与演员出镜叙事两种形式，此处展示4条精选。',
-          link: 'https://homture.com/',
-          linkLabel: '访问 Homture',
-          videos: [
-            '/homture1.mp4',
-            '/homture2.mp4',
-            '/homture3.mp4',
-            '/homture4.mp4',
-          ],
-        },
-        brandLabel: '品牌案例',
-        brands: [
+        heading: '案例作品',
+        intro: '从脚本撰写、达人对接，到拍摄与剪辑，我们全流程负责。',
+        videos: '条样片',
+        open: '查看项目',
+        close: '关闭',
+        projects: [
           {
-            category: '品牌大片 · 美妆',
-            year: '2022',
-            title: '春季营销大片',
-            desc: '为全球头部美妆品牌提供春季新品大片全流程制作——创意概念、现场执导与后期合成。',
-            detail: '动态图形与After Effects合成均由团队内部完成。该大片作为品牌当季主视觉内容在全数字渠道铺开。',
-            link: 'https://www.youtube.com/watch?v=5YVKqj5TeQA',
-            linkLabel: '观看影片',
+            category: 'TikTok Promote · 达人 1',
+            year: '2026',
+            title: 'TikTok Promote · 达人 1',
+            preview: 'tiktok-male',
+            desc: '为 TikTok 站内 Promote 推广功能制作的广告，由达人出镜。在纽约街头拍摄，结合口播叙事、动态图形与 App 内操作演示，将 Promote 拆解为三个简单步骤，展示如何提升播放量与粉丝数。此处展示4条。',
+            videos: [
+              '/tiktok-male1.mp4',
+              '/tiktok-male2.mp4',
+              '/tiktok-male3.mp4',
+              '/tiktok-male4.mp4',
+            ],
           },
           {
-            category: '餐饮 · IP联名',
-            year: '2024',
-            title: 'IP联名新品落地',
-            desc: '跨品牌IP联名项目创意策略与内容制作，联动三大全国渠道同步上市，首批售罄。',
-            detail: '涵盖创意概念、内容制作，以及到店、外卖、电商三大渠道的同步上线统筹。',
-            link: 'http://xhslink.com/o/2chBM4YvVpN',
-            linkLabel: '在小红书查看',
+            category: 'TikTok Promote · 达人 2',
+            year: '2026',
+            title: 'TikTok Promote · 达人 2',
+            preview: 'tiktok-female',
+            desc: '为 TikTok 站内 Promote 推广功能制作的广告，由达人出镜。融合街头 vlog、情景短剧与 App 内操作演示，展示无需高预算、人人都能一键推广视频、扩大受众。此处展示4条。',
+            videos: [
+              '/tiktok-female1.mp4',
+              '/tiktok-female2.mp4',
+              '/tiktok-female3.mp4',
+              '/tiktok-female4.mp4',
+            ],
           },
           {
-            category: 'DTC · 海外社媒',
-            year: '2023',
-            title: '品牌出海内容运营',
-            desc: '消费电子、美妆及户外运动DTC品牌进入美国市场的Instagram内容策略与生产执行。',
-            detail: '从零搭建三个品牌账号：@egretech.usa（充电宝）、@byootique（美妆收纳）、@lefeet.official（水下助推器），覆盖策略、拍摄、剪辑与发布。',
-            link: 'https://www.instagram.com/byootique/',
-            linkLabel: '查看 @byootique',
+            category: '达人广告 · 智能照明',
+            year: '2026',
+            title: 'Lepro · 达人广告',
+            preview: 'lepro',
+            desc: '为智能照明品牌 Lepro 制作的达人出镜产品广告，涵盖 W1 AI 智能 RGB 壁灯与 LED 笔形手电筒。每条视频以达人口播测评的原生形式呈现开箱上手、居家实用场景与直接的购买引导。此处展示2条。',
+            videos: ['/flashlight1.mp4', '/flashlight2.mp4'],
+          },
+          {
+            category: '信息流 · AI品牌',
+            year: '2025',
+            title: 'Homture × 科大讯飞',
+            preview: 'homture',
+            desc: '为科大讯飞联合开发的智能家居品牌 Homture 制作信息流视频内容。全程负责脚本撰写，一天内完成全部素材拍摄，每段素材可复用于至少两条成品视频，最终在10天内交付约50条视频。内容涵盖纯产品结合AI的影片与演员出镜叙事两种形式，此处展示4条精选。',
+            link: 'https://homture.com/',
+            linkLabel: '访问 Homture',
+            videos: [
+              '/homture1.mp4',
+              '/homture2.mp4',
+              '/homture3.mp4',
+              '/homture4.mp4',
+            ],
           },
         ],
-        more: '更多内容即将上线',
+        more: {
+          body: '想看与你品类相关的作品？告诉我们你的产品，我们会为你发送一条匹配的样片。',
+          cta: '索取样片',
+        },
       },
       team: {
         label: '团队介绍',
@@ -228,30 +250,27 @@
           {
             name: 'Chrissy Wang',
             role: '联合创始人 · 电影导演 & 创意总监',
-            bio: '纪录片导演与动态图形设计师，具有数据新闻背景，负责社媒内容的创意方向与视觉叙事。',
             photo: '/Chrissy.JPG',
-            website: 'https://xiaohuawang-chrissy.github.io/my-static-site-personal/',
+            website:
+              'https://xiaohuawang-chrissy.github.io/my-static-site-personal/',
           },
           {
             name: 'Alexa Ge',
             role: '联合创始人 · 纪录片导演',
-            bio: '品牌策略与视频制作，有快消品牌营销、社媒内容及中国品牌美国市场落地的实战经验。',
             photo: '/Alexa.JPG',
             photoScale: true,
             website: '/Alexa Portfolio 2026.pdf',
             websiteLabel: '查看作品集',
           },
           {
-            name: 'Yvonne Liu',
-            role: '联合创始人 · 记者 & 制片人',
-            bio: '写作者与设计师，具有新闻、摄影与视觉叙事背景，负责脚本创作、内容策略与项目统筹。',
-            photo: '/Yvonne.JPG',
-            website: 'https://www.yv1-1onne.com/',
+            name: 'Chloe Chi',
+            role: '市场策略',
+            photo: '/Chloe.jpg',
+            website: 'https://chcportfolio.cargo.site/',
           },
           {
             name: 'Jade Sun',
             role: '艺术总监',
-            bio: '视觉艺术家，创作涵盖摄影、平面设计与影像，负责内容的视觉风格与美术方向。',
             photo: '/Jade.jpg',
             photoScale: true,
             website: 'https://www.jadesun.art/',
@@ -277,8 +296,8 @@
         },
       },
       footer: {
-        tagline: '电影人 · 记者 · 纪录片导演 · 纽约',
-        copy: '© 2025 CAY\'s Studio',
+        tagline: '纽约',
+        copy: "© 2026 CAY's Studio",
       },
     },
   };
@@ -287,25 +306,66 @@
 
   let active = $state('home');
   let formState = $state('idle'); // 'idle' | 'submitting' | 'success' | 'error'
-  let expandedBrand = $state(null);
+  let selectedProject = $state(null);
+  let projectDialog = $state();
+  const project = $derived(
+    selectedProject === null ? null : t.work.projects[selectedProject]
+  );
 
-  function go(id) { active = id; }
+  function openProject(i) {
+    selectedProject = i;
+    projectDialog.showModal();
+  }
+
+  function closeProject() {
+    projectDialog.close();
+  }
+
+  // Preview clips play on hover (desktop). Devices without hover just loop them.
+  function playPreview(e) {
+    e.currentTarget
+      .querySelector('video')
+      ?.play()
+      .catch(() => {});
+  }
+
+  function stopPreview(e) {
+    const video = e.currentTarget.querySelector('video');
+    if (!video) return;
+    video.pause();
+    video.currentTime = 0;
+  }
+
+  function autoplayWithoutHover(video) {
+    if (!window.matchMedia('(hover: hover)').matches) {
+      video.autoplay = true;
+      video.play().catch(() => {});
+    }
+  }
+
+  function go(id) {
+    active = id;
+  }
 
   async function submitForm(e) {
     e.preventDefault();
     formState = 'submitting';
     try {
-      const res = await fetch('https://formsubmit.co/ajax/xiaohuaw765@gmail.com', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(e.target),
-      });
+      const res = await fetch(
+        'https://formsubmit.co/ajax/xiaohuaw765@gmail.com',
+        {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(e.target),
+        }
+      );
       formState = res.ok ? 'success' : 'error';
     } catch {
       formState = 'error';
     }
     setTimeout(() => {
-      window.location.href = 'https://xiaohuawang-chrissy.github.io/CAYs-Studio/';
+      window.location.href =
+        'https://xiaohuawang-chrissy.github.io/CAYs-Studio/';
     }, 3500);
   }
 </script>
@@ -327,19 +387,26 @@
         class:active={active === tab.id}
         role="tab"
         aria-selected={active === tab.id}
-        onclick={() => go(tab.id)}
-      >{tab.label}</button>
+        onclick={() => go(tab.id)}>{tab.label}</button
+      >
     {/each}
   </div>
 </header>
 
 <!-- ===== CONTENT PANELS ===== -->
 <main class="panels">
-
   <!-- HOME -->
   {#if active === 'home'}
     <div class="panel panel--hero">
-      <video class="hero-bg" src="{base}/herovideo.mp4" autoplay muted loop playsinline>
+      <video
+        class="hero-bg"
+        src="{base}/hero-reel.mp4"
+        poster="{base}/hero-reel.jpg"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
         <track kind="captions" />
       </video>
       <div class="hero-overlay"></div>
@@ -349,10 +416,15 @@
           <h1 class="hero-title">CAY'S STUDIO</h1>
           <div class="hero-rule"></div>
           <p class="hero-sub">{t.hero.sub}</p>
-        </div>
-        <div class="hero-ctas">
-          <button class="hero-cta" onclick={() => go('work')}>{t.hero.cta1}</button>
-          <button class="hero-cta" onclick={() => go('contact')}>{t.hero.cta2}</button>
+          <div class="hero-ctas">
+            <button
+              class="hero-cta hero-cta--primary"
+              onclick={() => go('work')}>{t.hero.cta1}</button
+            >
+            <button class="hero-cta" onclick={() => go('contact')}
+              >{t.hero.cta2}</button
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -361,132 +433,107 @@
   <!-- WORK -->
   {#if active === 'work'}
     <div class="panel panel--light scrollable">
-      <div class="panel-inner">
+      <div class="panel-inner panel-inner--wide">
         <div class="section-intro">
           <span class="label">{t.work.label}</span>
           <h2 class="panel-heading">{t.work.heading}</h2>
+          <p class="work-intro">{t.work.intro}</p>
         </div>
 
-        <!-- Homture featured project -->
-        <div class="work-featured">
-          <div class="work-meta-row">
-            <span class="work-tag">{t.work.homture.category}</span>
-            <span class="work-year">{t.work.homture.year}</span>
-          </div>
-          <h3 class="work-featured-title">{t.work.homture.title}</h3>
-          <p class="work-featured-desc">{t.work.homture.desc}</p>
-          <a class="work-link" href={t.work.homture.link} target="_blank" rel="noopener noreferrer">
-            {t.work.homture.linkLabel}
-          </a>
-          <div class="homture-grid">
-            {#each t.work.homture.videos as src}
-              <video
-                class="homture-video"
-                src="{base}{src}"
-                controls
-                playsinline
-                preload="metadata"
-              >
-                <track kind="captions" />
-              </video>
-            {/each}
-          </div>
-        </div>
-
-        <!-- Brand cases -->
-        <div class="brand-section-label">
-          <span class="label">{t.work.brandLabel}</span>
-        </div>
         <div class="work-grid">
-          {#each t.work.brands as item, i}
-            <div
-              class="work-card work-card--project"
-              class:is-expanded={expandedBrand === i}
-              role="button"
-              tabindex="0"
-              onclick={() => expandedBrand = expandedBrand === i ? null : i}
-              onkeydown={(e) => e.key === 'Enter' && (expandedBrand = expandedBrand === i ? null : i)}
+          {#each t.work.projects as item, i (item.preview)}
+            <button
+              class="work-card"
+              onclick={() => openProject(i)}
+              onmouseenter={playPreview}
+              onmouseleave={stopPreview}
+              onfocus={playPreview}
+              onblur={stopPreview}
             >
-              <div class="work-meta-row">
-                <span class="work-tag">{item.category}</span>
-                <span class="work-year">{item.year}</span>
-                <span class="work-toggle">{expandedBrand === i ? '×' : '+'}</span>
+              <div class="work-card-media">
+                <video
+                  class="work-card-preview"
+                  src="{base}/previews/{item.preview}.mp4"
+                  poster="{base}/previews/{item.preview}.jpg"
+                  muted
+                  loop
+                  playsinline
+                  preload="none"
+                  use:autoplayWithoutHover
+                ></video>
+                <span class="work-card-count"
+                  >▶ {item.videos.length} {t.work.videos}</span
+                >
               </div>
+              <span class="work-tag">{item.category} · {item.year}</span>
               <h3 class="work-card-title">{item.title}</h3>
-              <p class="work-card-desc">{item.desc}</p>
-              {#if expandedBrand === i}
-                {#if item.detail}
-                  <p class="work-card-detail">{item.detail}</p>
-                {/if}
-                {#if item.link}
-                  <a
-                    class="work-link"
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onclick={(e) => e.stopPropagation()}
-                  >{item.linkLabel}</a>
-                {/if}
-              {/if}
-            </div>
+              <span class="work-card-cta"
+                >{t.work.open} <span aria-hidden="true">→</span></span
+              >
+            </button>
           {/each}
-          <div class="work-more">
-            <span>{t.work.more}</span>
+        </div>
+
+        <div class="work-more">
+          <div>
+            <p class="work-more-body">{t.work.more.body}</p>
           </div>
+          <button class="work-more-cta" onclick={() => go('contact')}>
+            {t.work.more.cta} <span aria-hidden="true">→</span>
+          </button>
         </div>
       </div>
     </div>
   {/if}
 
-  <!-- ABOUT -->
-  {#if active === 'about'}
-    <div class="panel panel--light scrollable">
-      <div class="panel-inner">
-
-        <!-- About -->
-        <div class="section-intro">
-          <span class="label">{t.about.label}</span>
-          <h2 class="panel-heading">{t.about.heading}</h2>
-        </div>
-        <div class="about-body">
-          {#each t.about.body.split('\n\n') as para}
-            <p>{para}</p>
+  <!-- Project detail (opens over any panel) -->
+  <dialog
+    class="work-modal"
+    bind:this={projectDialog}
+    onclose={() => (selectedProject = null)}
+    onclick={(e) => e.target === projectDialog && closeProject()}
+  >
+    {#if project}
+      <div class="work-modal-inner">
+        <button
+          class="work-modal-close"
+          onclick={closeProject}
+          aria-label={t.work.close}>×</button
+        >
+        <span class="work-tag">{project.category} · {project.year}</span>
+        <h3 class="work-modal-title">{project.title}</h3>
+        <p class="work-modal-desc">{project.desc}</p>
+        {#if project.link}
+          <a
+            class="work-link"
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {project.linkLabel} ↗
+          </a>
+        {/if}
+        <div class="work-video-grid">
+          {#each project.videos as src (src)}
+            <video
+              class="work-video"
+              src="{base}{src}"
+              controls
+              playsinline
+              preload="metadata"
+            >
+              <track kind="captions" />
+            </video>
           {/each}
         </div>
-        <div class="stats-row">
-          {#each t.about.statsVal as val, i}
-            <div class="stat">
-              <span class="stat-num">{val}</span>
-              <span class="stat-label">{t.about.statsLabel[i]}</span>
-            </div>
-          {/each}
-        </div>
-
-        <div class="divider"></div>
-
-        <!-- Services -->
-        <div class="section-intro">
-          <span class="label">{t.about.servLabel}</span>
-          <h2 class="panel-heading">{t.about.servHeading}</h2>
-        </div>
-        <div class="services-grid">
-          {#each t.about.items as item}
-            <div class="service-card">
-              <span class="service-num">{item.num}</span>
-              <h3 class="service-title">{item.title}</h3>
-              <p class="service-desc">{item.desc}</p>
-            </div>
-          {/each}
-        </div>
-
       </div>
-    </div>
-  {/if}
+    {/if}
+  </dialog>
 
   <!-- TEAM -->
   {#if active === 'team'}
     <div class="panel panel--light scrollable">
-      <div class="panel-inner panel-inner--team">
+      <div class="panel-inner panel-inner--wide">
         <div class="section-intro">
           <span class="label">{t.team.label}</span>
           <h2 class="panel-heading">{t.team.heading}</h2>
@@ -497,7 +544,15 @@
             <div class="member">
               <div class="member-photo-wrap">
                 {#if m.photo}
-                  <img src="{base}{m.photo}" alt={m.name} class="member-photo" class:member-photo--zoomed={m.photoScale} style={m.photoScale && typeof m.photoScale === 'number' ? `--base-scale: ${m.photoScale}` : ''} />
+                  <img
+                    src="{base}{m.photo}"
+                    alt={m.name}
+                    class="member-photo"
+                    class:member-photo--zoomed={m.photoScale}
+                    style={m.photoScale && typeof m.photoScale === 'number'
+                      ? `--base-scale: ${m.photoScale}`
+                      : ''}
+                  />
                 {:else}
                   <div class="member-placeholder">
                     <span>{t.team.photoSoon}</span>
@@ -506,14 +561,39 @@
               </div>
               <h3 class="member-name">{m.name}</h3>
               <p class="member-role">{m.role}</p>
-              <p class="member-bio">{m.bio}</p>
               {#if m.website}
-                <a href={m.website.startsWith('/') ? `${base}${m.website}` : m.website} class="member-link" target="_blank" rel="noopener noreferrer">
+                <a
+                  href={m.website.startsWith('/')
+                    ? `${base}${m.website}`
+                    : m.website}
+                  class="member-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {m.websiteLabel ?? t.team.visitSite} ↗
                 </a>
               {/if}
             </div>
           {/each}
+        </div>
+
+        <!-- About the studio -->
+        <div class="team-about">
+          <span class="label">{t.about.label}</span>
+          <p class="team-about-body">{t.about.body}</p>
+          <ul class="team-about-services">
+            {#each t.about.services as service (service)}
+              <li>{service}</li>
+            {/each}
+          </ul>
+          <div class="team-about-stats">
+            {#each t.about.stats as stat (stat.label)}
+              <div class="stat">
+                <span class="stat-num">{stat.value}</span>
+                <span class="stat-label">{stat.label}</span>
+              </div>
+            {/each}
+          </div>
         </div>
       </div>
     </div>
@@ -522,18 +602,26 @@
   <!-- CONTACT -->
   {#if active === 'contact'}
     <div class="panel panel--dark scrollable">
-
       {#if formState === 'success' || formState === 'error'}
         <div class="form-result">
-          <div class="form-result-card" class:result--error={formState === 'error'}>
+          <div
+            class="form-result-card"
+            class:result--error={formState === 'error'}
+          >
             <p class="result-heading">
-              {formState === 'success' ? t.contact.success.heading : t.contact.error.heading}
+              {formState === 'success'
+                ? t.contact.success.heading
+                : t.contact.error.heading}
             </p>
             <p class="result-body">
-              {formState === 'success' ? t.contact.success.body : t.contact.error.body}
+              {formState === 'success'
+                ? t.contact.success.body
+                : t.contact.error.body}
             </p>
             <p class="result-returning">
-              {formState === 'success' ? t.contact.success.returning : t.contact.error.returning}
+              {formState === 'success'
+                ? t.contact.success.returning
+                : t.contact.error.returning}
             </p>
           </div>
         </div>
@@ -546,16 +634,25 @@
           <p class="contact-body">{t.contact.body}</p>
 
           <form class="contact-form" onsubmit={submitForm}>
-            <input type="hidden" name="_subject" value="CAY's Studio — New Inquiry" />
+            <input
+              type="hidden"
+              name="_subject"
+              value="CAY's Studio — New Inquiry"
+            />
             <div class="form-group">
               <label for="email">{t.contact.fields.email}</label>
               <input type="email" id="email" name="email" required />
             </div>
             <div class="form-group">
               <label for="message">{t.contact.fields.msg}</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
+              <textarea id="message" name="message" rows="5" required
+              ></textarea>
             </div>
-            <button type="submit" class="form-submit" disabled={formState === 'submitting'}>
+            <button
+              type="submit"
+              class="form-submit"
+              disabled={formState === 'submitting'}
+            >
               {formState === 'submitting' ? '…' : t.contact.fields.cta}
             </button>
           </form>
@@ -568,7 +665,6 @@
       </footer>
     </div>
   {/if}
-
 </main>
 
 <style lang="scss">
@@ -584,13 +680,23 @@
   $header-h: 104px;
   $header-h-mobile: 96px;
 
+  // Shared "terminal label" type: small mono caps
+  @mixin mono-label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
   .site-header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 50;
-    background: var(--color-black);
+    background: var(--color-ink);
+    border-bottom: 1px solid var(--color-ink-line);
   }
 
   .header-inner {
@@ -607,34 +713,40 @@
   }
 
   .logo {
-    font-family: var(--font-sans);
-    font-weight: var(--font-weight-medium);
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
-    color: var(--color-white);
-    background: none;
-    border: none;
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-semibold);
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+    color: var(--color-fg);
     padding: 0;
-    text-transform: uppercase;
+
+    // Neon block "cursor" in front of the wordmark
+    &::before {
+      content: '';
+      width: 0.6rem;
+      height: 0.6rem;
+      background: var(--color-neon-pink);
+    }
   }
 
   .lang-btn {
-    font-family: var(--font-sans);
-    font-size: 0.65rem;
-    font-weight: var(--font-weight-medium);
-    letter-spacing: 0.12em;
-    color: var(--color-white);
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.25);
+    @include mono-label;
+    color: var(--color-neon-cyan);
+    border: 1px solid var(--color-neon-cyan);
     padding: 0.35rem 0.8rem;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background 0.2s;
     min-height: 32px;
     min-width: 52px;
+    transition:
+      background var(--transition-fast),
+      color var(--transition-fast);
 
-    &:hover { background: rgba(255,255,255,0.18); }
+    &:hover {
+      background: var(--color-neon-cyan);
+      color: var(--color-ink);
+    }
   }
 
   /* Tab bar */
@@ -643,10 +755,12 @@
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    border-top: 1px solid rgba(255,255,255,0.07);
+    border-top: 1px solid var(--color-ink-line);
     height: 52px;
 
-    &::-webkit-scrollbar { display: none; }
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     @include mobile {
       height: 48px;
@@ -654,34 +768,29 @@
   }
 
   .tab-btn {
+    @include mono-label;
     flex: 1;
     min-width: 72px;
     height: 100%;
-    font-family: var(--font-sans);
-    font-size: 0.6rem;
-    font-weight: var(--font-weight-medium);
-    letter-spacing: 0.18em;
-    color: rgba(255,255,255,0.4);
-    background: none;
-    border: none;
-    border-bottom: 2px solid transparent;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: color 0.2s, border-color 0.2s;
+    color: var(--color-fg-muted);
+    border-bottom: 3px solid transparent;
+    transition:
+      color var(--transition-fast),
+      border-color var(--transition-fast);
     white-space: nowrap;
     padding: 0 0.75rem;
 
     &.active {
-      color: var(--color-white);
-      border-bottom-color: var(--color-gold);
+      color: var(--color-fg);
+      border-bottom-color: var(--color-neon-pink);
     }
 
     &:hover:not(.active) {
-      color: rgba(255,255,255,0.7);
+      color: var(--color-neon-cyan);
     }
 
     @include mobile {
-      font-size: 0.58rem;
+      font-size: 0.62rem;
       min-width: 60px;
       padding: 0 0.6rem;
     }
@@ -705,29 +814,45 @@
     inset: 0;
   }
 
-  .panel--light { background: var(--color-cream); }
-  .panel--dark  { background: var(--color-dark); }
+  // Every content panel is dark, with a faint blueprint grid
+  .panel--light,
+  .panel--dark {
+    background-color: var(--color-ink);
+    background-image:
+      linear-gradient(var(--color-ink-grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-ink-grid) 1px, transparent 1px);
+    background-size: 48px 48px;
+    background-position: -1px -1px;
+    color: var(--color-fg);
+  }
 
   .scrollable {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
 
+  // Contact: keep the footer pinned to the bottom of the panel
+  .panel--dark {
+    display: flex;
+    flex-direction: column;
+
+    > .panel-inner {
+      flex: 1 0 auto;
+      width: 100%;
+    }
+  }
+
   .panel-inner {
     max-width: 960px;
     margin: 0 auto;
-    padding: 3rem 2rem 4rem;
+    padding: 3.5rem 2rem 4rem;
 
     @include mobile {
       padding: 2rem 1.25rem 3rem;
     }
 
-    &--team {
-      max-width: 560px;
-
-      @include mobile {
-        max-width: 100%;
-      }
+    &--wide {
+      max-width: var(--max-width-mid);
     }
   }
 
@@ -735,6 +860,7 @@
   .panel--hero {
     display: flex;
     align-items: stretch;
+    background: var(--color-ink);
   }
 
   .hero-bg {
@@ -749,448 +875,447 @@
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45);
     z-index: 1;
+    // Scanlines on top of a vignette that is darkest behind the title,
+    // so burned-in captions in the reel don't compete with it
+    background:
+      repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.18) 0 1px,
+        transparent 1px 3px
+      ),
+      radial-gradient(
+        ellipse at center,
+        rgba(11, 11, 16, 0.82) 0%,
+        rgba(11, 11, 16, 0.55) 80%
+      );
   }
 
   .hero-body {
     position: relative;
     z-index: 2;
     width: 100%;
-    display: grid;
-    grid-template-rows: 1fr auto 1fr;
-    grid-template-columns: 1fr 1fr;
-    padding: 3rem 2.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
 
     @include mobile {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto 1fr auto;
-      padding: 2rem 1.5rem 2rem;
-      gap: 1.5rem;
+      padding: 1.5rem 1.25rem 2rem;
     }
   }
 
   .hero-loc {
-    grid-row: 1;
-    grid-column: 1;
-    align-self: start;
-    font-family: var(--font-sans);
-    font-weight: var(--font-weight-medium);
-    font-size: clamp(1rem, 2.5vw, 1.4rem);
-    letter-spacing: 0.32em;
-    color: rgba(255,255,255,0.92);
-    text-transform: uppercase;
+    @include mono-label;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-fg);
+    background: var(--color-ink);
+    border: 1px solid var(--color-ink-line);
+    padding: 0.4rem 0.75rem;
     margin: 0;
+
+    // "Live" indicator dot
+    &::before {
+      content: '';
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 50%;
+      background: var(--color-neon-pink);
+      box-shadow: 0 0 8px var(--color-neon-pink);
+    }
   }
 
   .hero-center {
-    grid-row: 2;
-    grid-column: 1 / 3;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-
-    @include mobile {
-      grid-column: 1;
-      grid-row: 2;
-    }
   }
 
   .hero-title {
     font-family: var(--font-display);
-    font-weight: var(--font-weight-light);
-    font-size: clamp(2.6rem, 9vw, 7rem);
-    letter-spacing: 0.22em;
-    color: var(--color-white);
-    text-transform: uppercase;
-    line-height: 1;
-    margin-bottom: 1.25rem;
+    font-weight: var(--font-weight-semibold);
+    font-size: clamp(2.8rem, 10vw, 8rem);
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+    color: var(--color-fg);
+    // Offset pink/cyan copies: a static "chromatic" pop, no animation
+    text-shadow:
+      -3px 0 var(--color-neon-cyan),
+      3px 0 var(--color-neon-pink);
+    margin-bottom: 1.5rem;
   }
 
   .hero-rule {
-    width: 38%;
-    max-width: 400px;
-    height: 1px;
-    background: rgba(255,255,255,0.3);
-    margin: 0 auto 1.25rem;
+    width: 3.5rem;
+    height: 4px;
+    background: var(--color-acid);
+    margin-bottom: 1.5rem;
   }
 
   .hero-sub {
-    font-family: var(--font-sans);
-    font-weight: var(--font-weight-light);
-    font-size: 0.65rem;
-    letter-spacing: 0.25em;
-    color: rgba(255,255,255,0.45);
-    text-transform: uppercase;
-    margin: 0;
+    @include mono-label;
+    font-size: clamp(0.72rem, 1.4vw, 0.9rem);
+    color: var(--color-fg);
+    background: var(--color-ink);
+    padding: 0.5rem 0.9rem;
+    margin: 0 0 2.25rem;
+    text-wrap: balance;
   }
 
   .hero-ctas {
-    grid-row: 3;
-    grid-column: 2;
-    align-self: end;
-    justify-self: end;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.4rem;
-
-    @include mobile {
-      grid-row: 3;
-      grid-column: 1;
-      align-items: flex-start;
-      justify-self: start;
-    }
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 1.25rem;
   }
 
   .hero-cta {
-    font-family: var(--font-sans);
-    font-weight: var(--font-weight-medium);
-    font-size: clamp(1rem, 3.5vw, 1.6rem);
-    letter-spacing: 0.18em;
-    color: var(--color-white);
-    background: none;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    line-height: 1.4;
-    padding: 0.25rem 0;
-    transition: opacity 0.2s;
-    text-align: right;
-    min-height: 44px;
-    display: flex;
-    align-items: center;
+    @include mono-label;
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-fg);
+    background: var(--color-ink);
+    border: 2px solid var(--color-fg);
+    padding: 0.9rem 1.6rem;
+    min-height: 48px;
+    transition:
+      transform var(--transition-fast),
+      box-shadow var(--transition-fast);
 
-    &:hover { opacity: 0.55; }
+    &:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: var(--shadow-pop-cyan);
+    }
 
-    @include mobile {
-      text-align: left;
+    &--primary {
+      color: var(--color-ink);
+      background: var(--color-acid);
+      border-color: var(--color-acid);
+      box-shadow: var(--shadow-pop-pink);
+
+      &:hover {
+        box-shadow: 9px 9px 0 var(--color-neon-pink);
+      }
     }
   }
 
   /* ===== SECTION INTRO ===== */
   .section-intro {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
   }
 
   .label {
+    @include mono-label;
     display: block;
-    font-family: var(--font-sans);
-    font-size: 0.6rem;
-    font-weight: var(--font-weight-medium);
-    letter-spacing: 0.28em;
-    color: var(--color-warm-gray);
-    text-transform: uppercase;
+    color: var(--color-neon-pink);
     margin-bottom: 0.75rem;
 
-    &.light { color: rgba(255,255,255,0.38); }
+    &::before {
+      content: '// ';
+      color: var(--color-fg-muted);
+    }
   }
 
   .panel-heading {
     font-family: var(--font-display);
-    font-weight: var(--font-weight-light);
-    font-size: clamp(2rem, 5vw, 3rem);
-    line-height: 1.1;
+    font-weight: var(--font-weight-semibold);
+    font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+    letter-spacing: -0.02em;
+    line-height: 1.05;
     white-space: pre-line;
-    color: var(--color-dark);
-
-    &.light { color: var(--color-white); }
+    color: var(--color-fg);
   }
 
   /* ===== WORK ===== */
-  .work-featured {
-    padding: 2rem 2.5rem;
-    background: var(--color-black);
-    color: var(--color-cream);
-    margin-bottom: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-
-    @include mobile {
-      padding: 1.5rem;
-    }
-  }
-
-  .work-meta-row {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .work-tag {
-    font-family: var(--font-sans);
-    font-size: 0.55rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--color-gold);
-  }
-
-  .work-year {
-    font-family: var(--font-sans);
-    font-size: 0.55rem;
-    letter-spacing: 0.15em;
-    color: rgba(247, 242, 235, 0.4);
-  }
-
-  .work-featured-title {
-    font-family: var(--font-display);
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    font-weight: 300;
-    font-style: italic;
-    color: var(--color-cream);
-    margin: 0;
-    line-height: 1.1;
-  }
-
-  .work-featured-desc {
-    font-family: var(--font-sans);
-    font-size: 0.78rem;
-    line-height: 1.65;
-    color: rgba(247, 242, 235, 0.65);
-    margin: 0;
-    max-width: 540px;
-  }
-
-  .work-link {
-    display: inline-block;
-    font-family: var(--font-sans);
-    font-size: 0.58rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--color-gold);
-    text-decoration: none;
-    border-bottom: 1px solid var(--color-gold);
-    padding-bottom: 0.15rem;
-    width: fit-content;
-    margin-top: 0.25rem;
-
-    &:hover { opacity: 0.7; }
+  .work-intro {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-fg-muted);
+    max-width: 560px;
+    margin-top: 1rem;
   }
 
   .work-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem;
 
     @include mobile {
-      grid-template-columns: 1fr;
-      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem 1rem;
     }
   }
 
   .work-card {
+    all: unset;
     display: flex;
     flex-direction: column;
-    background: var(--color-black);
-  }
-
-  .work-card--project {
-    padding: 1.5rem;
-    gap: 0.55rem;
+    gap: 0.5rem;
     cursor: pointer;
-    transition: background 0.2s;
 
-    &:hover { background: #1a1a1a; }
-    &.is-expanded { background: #1a1a1a; }
-
-    .work-year { color: rgba(247, 242, 235, 0.3); }
-  }
-
-  .work-toggle {
-    margin-left: auto;
-    font-family: var(--font-sans);
-    font-size: 0.85rem;
-    color: rgba(247, 242, 235, 0.5);
-    line-height: 1;
-    flex-shrink: 0;
-  }
-
-  .work-card-detail {
-    font-family: var(--font-sans);
-    font-size: 0.7rem;
-    line-height: 1.6;
-    color: rgba(247, 242, 235, 0.45);
-    margin: 0;
-    padding-top: 0.25rem;
-    border-top: 1px solid rgba(247, 242, 235, 0.08);
-  }
-
-  .homture-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.6rem;
-    margin-top: 0.5rem;
-
-    @include tablet {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include mobile {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.4rem;
+    &:focus-visible {
+      outline: 2px solid var(--color-neon-cyan);
+      outline-offset: 0.5rem;
     }
   }
 
-  .homture-video {
-    width: 100%;
+  .work-card-media {
+    position: relative;
     aspect-ratio: 9 / 16;
+    overflow: hidden;
+    background: var(--color-ink-raised);
+    border: 2px solid var(--color-ink-line);
+    margin-bottom: 0.5rem;
+    transition:
+      transform var(--transition-fast),
+      box-shadow var(--transition-fast),
+      border-color var(--transition-fast);
+  }
+
+  .work-card-preview {
+    width: 100%;
+    height: 100%;
     display: block;
     object-fit: cover;
-    background: #1a1a1a;
   }
 
-  .brand-section-label {
-    margin-bottom: 1rem;
-    padding-top: 0.25rem;
+  .work-card-count {
+    @include mono-label;
+    font-size: 0.6rem;
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    color: var(--color-acid);
+    background: var(--color-ink);
+    padding: 0.3rem 0.5rem;
+  }
+
+  .work-card:hover,
+  .work-card:focus-visible {
+    .work-card-media {
+      transform: translate(-4px, -4px);
+      border-color: var(--color-neon-pink);
+      box-shadow: var(--shadow-pop-pink);
+    }
+
+    .work-card-cta {
+      color: var(--color-acid);
+    }
+  }
+
+  .work-tag {
+    @include mono-label;
+    font-size: 0.6rem;
+    color: var(--color-neon-cyan);
   }
 
   .work-card-title {
     font-family: var(--font-display);
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
-    font-weight: 300;
-    font-style: italic;
-    color: var(--color-cream);
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-fg);
+    line-height: 1.25;
     margin: 0;
-    line-height: 1.2;
   }
 
-  .work-card-desc {
-    font-family: var(--font-sans);
-    font-size: 0.72rem;
-    line-height: 1.6;
-    color: rgba(247, 242, 235, 0.6);
-    margin: 0;
-    flex: 1;
+  .work-card-cta {
+    @include mono-label;
+    width: fit-content;
+    color: var(--color-neon-pink);
+    margin-top: 0.25rem;
+    transition: color var(--transition-fast);
   }
 
   .work-more {
-    grid-column: 1 / -1;
+    margin-top: 4rem;
+    padding: 2rem 2.25rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 100px;
-    border: 1px dashed rgba(0,0,0,0.12);
-    background: rgba(0,0,0,0.03);
-
-    span {
-      font-family: var(--font-sans);
-      font-size: 0.6rem;
-      letter-spacing: 0.18em;
-      color: var(--color-warm-gray);
-      text-transform: uppercase;
-    }
-  }
-
-  /* ===== ABOUT ===== */
-  .about-body {
-    font-size: 1rem;
-    line-height: 1.85;
-    color: var(--color-text-muted);
-    margin-bottom: 2rem;
-    max-width: 680px;
-  }
-
-  .stats-row {
-    display: flex;
-    gap: 2.5rem;
-    padding: 1.5rem 0;
-    border-top: 1px solid rgba(0,0,0,0.08);
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-    flex-wrap: wrap;
-  }
-
-  .stat {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-
-  .stat-num {
-    font-family: var(--font-display);
-    font-size: 2.5rem;
-    font-weight: var(--font-weight-light);
-    color: var(--color-dark);
-    line-height: 1;
-  }
-
-  .stat-label {
-    font-family: var(--font-sans);
-    font-size: 0.58rem;
-    letter-spacing: 0.2em;
-    color: var(--color-warm-gray);
-    text-transform: uppercase;
-  }
-
-  .divider {
-    height: 1px;
-    background: rgba(0,0,0,0.07);
-    margin: 3rem 0;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: rgba(0,0,0,0.06);
+    justify-content: space-between;
+    gap: 2rem;
+    background: var(--color-ink-raised);
+    border: 2px solid var(--color-ink-line);
+    border-left: 6px solid var(--color-neon-pink);
 
     @include mobile {
-      grid-template-columns: 1fr;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.5rem 1.25rem;
+      gap: 1.25rem;
     }
   }
 
-  .service-card {
-    background: var(--color-cream);
-    padding: 2rem 1.5rem;
-    transition: background 0.25s;
-
-    &:hover { background: var(--color-cream-dark); }
-  }
-
-  .service-num {
-    display: block;
-    font-family: var(--font-display);
-    font-size: 0.75rem;
-    color: var(--color-gold);
-    margin-bottom: 1rem;
-    letter-spacing: 0.12em;
-  }
-
-  .service-title {
-    font-family: var(--font-display);
-    font-size: 1.25rem;
-    font-weight: var(--font-weight-normal);
-    color: var(--color-dark);
-    margin-bottom: 0.6rem;
-  }
-
-  .service-desc {
-    font-size: 0.82rem;
+  .work-more-body {
+    font-size: 1.05rem;
     line-height: 1.7;
-    color: var(--color-text-muted);
+    color: var(--color-fg);
+    max-width: 520px;
     margin: 0;
   }
 
-  /* ===== TEAM ===== */
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem 2.5rem;
+  .work-more-cta {
+    @include mono-label;
+    font-size: 0.78rem;
+    font-weight: var(--font-weight-semibold);
+    flex-shrink: 0;
+    color: var(--color-ink);
+    background: var(--color-acid);
+    padding: 0.9rem 1.5rem;
+    min-height: 48px;
+    box-shadow: var(--shadow-pop-pink);
+    transition:
+      transform var(--transition-fast),
+      box-shadow var(--transition-fast);
+
+    &:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 9px 9px 0 var(--color-neon-pink);
+    }
+  }
+
+  /* Project detail dialog */
+  .work-modal {
+    width: min(1020px, calc(100vw - 2rem));
+    max-height: calc(100vh - 2rem);
+    margin: auto;
+    padding: 0;
+    outline: none;
+    background: var(--color-ink-raised);
+    color: var(--color-fg);
+    border: 2px solid var(--color-neon-pink);
+    box-shadow: 10px 10px 0 var(--color-neon-cyan);
+
+    &::backdrop {
+      background: rgba(11, 11, 16, 0.85);
+    }
+  }
+
+  .work-modal-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 2.5rem;
 
     @include mobile {
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem 1rem;
+      padding: 1.5rem 1.25rem;
+    }
+  }
+
+  .work-modal-close {
+    @include mono-label;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1.1rem;
+    color: var(--color-fg);
+    border: 1px solid var(--color-ink-line);
+    transition:
+      background var(--transition-fast),
+      color var(--transition-fast);
+
+    &:hover,
+    &:focus-visible {
+      background: var(--color-neon-pink);
+      color: var(--color-ink);
+    }
+  }
+
+  .work-modal-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin: 0;
+    padding-right: 3rem;
+  }
+
+  .work-modal-desc {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--color-fg-muted);
+    margin: 0;
+    max-width: 640px;
+  }
+
+  .work-link {
+    @include mono-label;
+    width: fit-content;
+    color: var(--color-acid);
+    border-bottom: 2px solid var(--color-acid);
+    padding-bottom: 0.15rem;
+  }
+
+  .work-video-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    margin-top: 1rem;
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+    }
+  }
+
+  .work-video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    display: block;
+    object-fit: cover;
+    background: var(--color-ink);
+    border: 1px solid var(--color-ink-line);
+  }
+
+  /* ===== TEAM ===== */
+  .team-intro {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-fg-muted);
+    margin-bottom: 2.5rem;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem;
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem 1rem;
     }
   }
 
   .member {
     display: flex;
     flex-direction: column;
-    gap: 0.9rem;
+    gap: 0.6rem;
   }
 
   .member-photo-wrap {
     aspect-ratio: 3 / 4;
     overflow: hidden;
-    background: var(--color-cream-dark);
+    background: var(--color-ink-raised);
+    border: 2px solid var(--color-ink-line);
+    margin-bottom: 0.4rem;
+    transition:
+      transform var(--transition-fast),
+      box-shadow var(--transition-fast),
+      border-color var(--transition-fast);
+
+    .member:hover & {
+      transform: translate(-4px, -4px);
+      border-color: var(--color-neon-cyan);
+      box-shadow: var(--shadow-pop-cyan);
+    }
   }
 
   .member-photo {
@@ -1198,22 +1323,19 @@
     height: 100%;
     object-fit: cover;
     object-position: top center;
-    /* Black and white */
+    // Black and white until hovered
     filter: grayscale(100%) contrast(1.05);
-    transition: filter 0.4s ease, transform 0.5s ease;
+    transition:
+      filter 0.4s ease,
+      transform 0.5s ease;
 
     .member:hover & {
       filter: grayscale(0%) contrast(1);
-      transform: scale(1.03);
     }
 
     &--zoomed {
       transform: scale(var(--base-scale, 1.18));
       object-position: center center;
-    }
-
-    .member:hover &--zoomed {
-      transform: scale(calc(var(--base-scale, 1.18) + 0.05));
     }
   }
 
@@ -1223,14 +1345,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px dashed rgba(0,0,0,0.12);
 
     span {
-      font-family: var(--font-sans);
-      font-size: 0.58rem;
-      letter-spacing: 0.15em;
-      color: var(--color-warm-gray);
-      text-transform: uppercase;
+      @include mono-label;
+      color: var(--color-fg-muted);
       text-align: center;
       padding: 0.5rem;
     }
@@ -1239,49 +1357,92 @@
   .member-name {
     font-family: var(--font-display);
     font-size: 1.3rem;
-    font-weight: var(--font-weight-normal);
-    color: var(--color-dark);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-fg);
     margin: 0;
   }
 
   .member-role {
-    font-family: var(--font-sans);
-    font-size: 0.6rem;
-    letter-spacing: 0.15em;
-    color: var(--color-warm-gray);
-    text-transform: uppercase;
-    margin: 0 0 0.75rem;
-  }
-
-  .member-bio {
-    font-size: 0.8rem;
-    line-height: 1.75;
-    color: var(--color-text-muted);
+    @include mono-label;
+    font-size: 0.62rem;
+    line-height: 1.6;
+    color: var(--color-neon-cyan);
     margin: 0 0 0.75rem;
   }
 
   .member-link {
-    display: inline-block;
-    font-family: var(--font-sans);
-    font-size: 0.6rem;
-    letter-spacing: 0.15em;
-    color: var(--color-dark);
-    text-transform: uppercase;
-    text-decoration: none;
-    border-bottom: 1px solid var(--color-dark);
+    @include mono-label;
+    width: fit-content;
+    // Line links up along the bottom even when roles wrap to two lines
+    margin-top: auto;
+    color: var(--color-neon-pink);
+    border-bottom: 1px solid currentColor;
     padding-bottom: 1px;
-    transition: opacity 0.2s;
 
-    &:hover { opacity: 0.45; }
+    &:hover {
+      opacity: 1;
+      color: var(--color-acid);
+    }
   }
 
-  .team-intro {
+  .team-about {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: var(--color-ink-raised);
+    border: 2px solid var(--color-ink-line);
+
+    @include mobile {
+      padding: 1.5rem 1.25rem;
+    }
+  }
+
+  .team-about-body {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--color-fg);
+    margin: 0 0 1.5rem;
+  }
+
+  .team-about-services {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    li {
+      @include mono-label;
+      font-size: 0.62rem;
+      color: var(--color-neon-cyan);
+      border: 1px solid var(--color-neon-cyan);
+      padding: 0.45rem 0.7rem;
+    }
+  }
+
+  .team-about-stats {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .stat-num {
     font-family: var(--font-display);
-    font-size: 1.1rem;
-    font-weight: var(--font-weight-light);
-    color: var(--color-warm-gray);
-    margin-bottom: 2.5rem;
-    font-style: italic;
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-acid);
+    line-height: 1;
+  }
+
+  .stat-label {
+    @include mono-label;
+    font-size: 0.6rem;
+    color: var(--color-fg-muted);
   }
 
   /* ===== CONTACT ===== */
@@ -1293,7 +1454,7 @@
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    background: var(--color-dark);
+    background: var(--color-ink);
   }
 
   .form-result-card {
@@ -1301,72 +1462,68 @@
     max-width: 420px;
 
     &.result--error .result-heading {
-      color: #e07070;
+      color: var(--color-neon-pink);
     }
   }
 
   .result-heading {
     font-family: var(--font-display);
     font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: var(--font-weight-light);
-    color: var(--color-white);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-acid);
     line-height: 1.1;
     margin-bottom: 1rem;
   }
 
   .result-body {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     line-height: 1.8;
-    color: rgba(255,255,255,0.5);
+    color: var(--color-fg);
     margin-bottom: 2rem;
   }
 
   .result-returning {
-    font-family: var(--font-sans);
-    font-size: 0.6rem;
-    letter-spacing: 0.2em;
-    color: rgba(255,255,255,0.2);
-    text-transform: uppercase;
+    @include mono-label;
+    color: var(--color-fg-muted);
     margin: 0;
   }
 
   .contact-body {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.8;
-    color: rgba(255,255,255,0.4);
-    margin: 1.5rem 0 1rem;
+    color: var(--color-fg-muted);
+    margin: 0 0 2rem;
     max-width: 520px;
   }
 
   .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.5rem;
     max-width: 560px;
   }
 
   .form-group {
     display: flex;
     flex-direction: column;
-    gap: 0.45rem;
+    gap: 0.5rem;
 
     label {
-      font-family: var(--font-sans);
-      font-size: 0.58rem;
-      letter-spacing: 0.22em;
-      color: rgba(255,255,255,0.38);
-      text-transform: uppercase;
+      @include mono-label;
+      color: var(--color-neon-cyan);
     }
 
-    input, textarea {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.09);
-      color: var(--color-white);
+    input,
+    textarea {
+      background: var(--color-ink-raised);
+      border: 2px solid var(--color-ink-line);
+      color: var(--color-fg);
       font-family: var(--font-sans);
-      font-size: 0.85rem;
-      font-weight: var(--font-weight-light);
+      font-size: 0.95rem;
       padding: 0.9rem 1rem;
-      transition: border-color 0.2s;
+      transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
       resize: none;
       -webkit-appearance: none;
       appearance: none;
@@ -1375,50 +1532,56 @@
 
       &:focus {
         outline: none;
-        border-color: rgba(255,255,255,0.28);
+        border-color: var(--color-neon-cyan);
+        box-shadow: 4px 4px 0 var(--color-neon-cyan);
       }
     }
   }
 
   .form-submit {
+    @include mono-label;
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-semibold);
     align-self: flex-start;
-    font-family: var(--font-sans);
-    font-weight: var(--font-weight-medium);
-    font-size: 0.6rem;
-    letter-spacing: 0.22em;
-    color: var(--color-black);
-    background: var(--color-gold-light);
-    border: none;
+    color: var(--color-ink);
+    background: var(--color-acid);
     padding: 0.9rem 2.5rem;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background 0.2s;
-    min-height: 44px;
+    min-height: 48px;
+    box-shadow: var(--shadow-pop-pink);
+    transition:
+      transform var(--transition-fast),
+      box-shadow var(--transition-fast);
 
-    &:hover { background: var(--color-gold); }
+    &:hover:not(:disabled) {
+      transform: translate(-3px, -3px);
+      box-shadow: 9px 9px 0 var(--color-neon-pink);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
   }
 
   /* ===== PANEL FOOTER ===== */
   .panel-footer {
     padding: 2rem;
-    border-top: 1px solid rgba(255,255,255,0.06);
+    border-top: 1px solid var(--color-ink-line);
+    background: var(--color-ink);
     text-align: center;
   }
 
   .footer-tagline {
-    font-family: var(--font-sans);
-    font-size: 0.6rem;
-    letter-spacing: 0.2em;
-    color: rgba(255,255,255,0.2);
-    text-transform: uppercase;
+    @include mono-label;
+    color: var(--color-fg-muted);
     margin-bottom: 0.3rem;
   }
 
   .footer-copy {
-    font-family: var(--font-sans);
-    font-size: 0.58rem;
-    letter-spacing: 0.12em;
-    color: rgba(255,255,255,0.12);
+    @include mono-label;
+    font-size: 0.6rem;
+    color: var(--color-fg-muted);
+    opacity: 0.6;
     margin: 0;
   }
 </style>
