@@ -127,7 +127,7 @@
             website: 'https://www.jadesun.art/',
           },
           {
-            name: 'Hongxuan Li',
+            name: 'Leo Li',
             role: 'Technical Support',
             photo: '/Hongxuan.png',
             photoScale: 1.7,
@@ -290,7 +290,7 @@
             website: 'https://www.jadesun.art/',
           },
           {
-            name: 'Hongxuan Li',
+            name: 'Leo Li',
             role: '技术支持',
             photo: '/Hongxuan.png',
             photoScale: 1.7,
