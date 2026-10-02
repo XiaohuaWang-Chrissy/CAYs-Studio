@@ -19,7 +19,6 @@
   import { defineMeta } from '@storybook/addon-svelte-csf';
   import Profile from '$lib/components/Portfolio/Profile.svelte';
 
-
   const { Story } = defineMeta({
     title: 'Portfolio/Profile',
     component: Profile,
@@ -108,8 +107,7 @@
 <Story
   name="With Bio"
   args={{
-    bio:
-      "I am the editor of The Masses, a monthly socialist magazine covering politics, art, and culture from New York City.\n\nNext, I am reporting on labor conditions in the garment district and translating Trotsky's writings for American readers.",
+    bio: "I am the editor of The Masses, a monthly socialist magazine covering politics, art, and culture from New York City.\n\nNext, I am reporting on labor conditions in the garment district and translating Trotsky's writings for American readers.",
   }}
 >
   {#snippet children(args)}

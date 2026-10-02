@@ -18,7 +18,7 @@
       },
       about: {
         label: 'WHO WE ARE',
-        body: "CAY's Studio is a New York-based content studio founded by filmmakers, journalists, and documentary directors. We make social video for Chinese brands going global — with a filmmaker's eye for visuals, a journalist's ear for writing, and a clear sense of how stories travel on social platforms.",
+        body: "CAY's Studio is a New York-based content studio founded by filmmakers, journalists, and documentary directors. We make social video for Chinese brands going global.",
         services: [
           'Video Production',
           'Copywriting & Scripting',
@@ -97,23 +97,21 @@
       team: {
         label: 'OUR TEAM',
         heading: 'The Team',
-        intro:
-          'A team of filmmakers, journalists, documentary directors, and a visual art director.',
         members: [
           {
-            name: 'Chrissy Wang',
-            role: 'Co-Founder · Filmmaker & Creative Director',
-            photo: '/Chrissy.JPG',
-            website:
-              'https://xiaohuawang-chrissy.github.io/my-static-site-personal/',
-          },
-          {
             name: 'Alexa Ge',
-            role: 'Co-Founder · Documentary Filmmaker',
+            role: 'Co-Founder',
             photo: '/Alexa.JPG',
             photoScale: 1.35,
             website: '/Alexa Portfolio 2026.pdf',
             websiteLabel: 'View Portfolio',
+          },
+          {
+            name: 'Chrissy Wang',
+            role: 'Co-Founder',
+            photo: '/Chrissy.JPG',
+            website:
+              'https://xiaohuawang-chrissy.github.io/my-static-site-personal/',
           },
           {
             name: 'Chloe Chi',
@@ -127,6 +125,23 @@
             photo: '/Jade.jpg',
             photoScale: true,
             website: 'https://www.jadesun.art/',
+          },
+          {
+            name: 'Hongxuan Li',
+            role: 'Technical Support',
+            photo: '/Hongxuan.png',
+            photoScale: 1.7,
+            photoPosition: '30% center',
+            website: 'https://github.com/h0ngxuanli',
+            websiteLabel: 'GitHub',
+          },
+          {
+            name: 'Michelle He',
+            role: 'Video Concept & Technical Support',
+            photo: '/Michelle.JPG',
+            photoScale: 1,
+            website: 'https://xhslink.cn/o/6VZ2zaHtd9h',
+            websiteLabel: 'RedNote',
           },
         ],
         photoSoon: 'Photo coming soon',
@@ -172,7 +187,7 @@
       },
       about: {
         label: '关于我们',
-        body: "CAY's Studio 由电影人、记者与纪录片导演在纽约共同创立，专注为中国品牌出海制作社媒视频内容——以电影人的视觉标准、记者的文字功底，以及对社交平台传播方式的实际理解来创作。",
+        body: "CAY's Studio 由电影人、记者与纪录片导演在纽约共同创立，专注为中国品牌出海制作社媒视频内容。",
         services: ['视频制作', '文案与脚本', '纪录片风格内容', '平台内容策略'],
         stats: [
           { value: '5+', label: '从业年限' },
@@ -245,22 +260,21 @@
       team: {
         label: '团队介绍',
         heading: '团队成员',
-        intro: '团队由电影人、记者、纪录片导演与视觉艺术总监组成。',
         members: [
           {
-            name: 'Chrissy Wang',
-            role: '联合创始人 · 电影导演 & 创意总监',
-            photo: '/Chrissy.JPG',
-            website:
-              'https://xiaohuawang-chrissy.github.io/my-static-site-personal/',
-          },
-          {
             name: 'Alexa Ge',
-            role: '联合创始人 · 纪录片导演',
+            role: '联合创始人',
             photo: '/Alexa.JPG',
             photoScale: true,
             website: '/Alexa Portfolio 2026.pdf',
             websiteLabel: '查看作品集',
+          },
+          {
+            name: 'Chrissy Wang',
+            role: '联合创始人',
+            photo: '/Chrissy.JPG',
+            website:
+              'https://xiaohuawang-chrissy.github.io/my-static-site-personal/',
           },
           {
             name: 'Chloe Chi',
@@ -274,6 +288,23 @@
             photo: '/Jade.jpg',
             photoScale: true,
             website: 'https://www.jadesun.art/',
+          },
+          {
+            name: 'Hongxuan Li',
+            role: '技术支持',
+            photo: '/Hongxuan.png',
+            photoScale: 1.7,
+            photoPosition: '30% center',
+            website: 'https://github.com/h0ngxuanli',
+            websiteLabel: 'GitHub',
+          },
+          {
+            name: 'Michelle He',
+            role: '视频创意 · 技术支持',
+            photo: '/Michelle.JPG',
+            photoScale: 1,
+            website: 'https://xhslink.cn/o/6VZ2zaHtd9h',
+            websiteLabel: '小红书',
           },
         ],
         photoSoon: '照片即将更新',
@@ -364,8 +395,7 @@
       formState = 'error';
     }
     setTimeout(() => {
-      window.location.href =
-        'https://caystudio.work/';
+      window.location.href = 'https://caystudio.work/';
     }, 3500);
   }
 </script>
@@ -538,7 +568,9 @@
           <span class="label">{t.team.label}</span>
           <h2 class="panel-heading">{t.team.heading}</h2>
         </div>
-        <p class="team-intro">{t.team.intro}</p>
+        {#if t.team.intro}
+          <p class="team-intro">{t.team.intro}</p>
+        {/if}
         <div class="team-grid">
           {#each t.team.members as m}
             <div class="member">
@@ -549,9 +581,11 @@
                     alt={m.name}
                     class="member-photo"
                     class:member-photo--zoomed={m.photoScale}
-                    style={m.photoScale && typeof m.photoScale === 'number'
-                      ? `--base-scale: ${m.photoScale}`
-                      : ''}
+                    style="{m.photoScale && typeof m.photoScale === 'number'
+                      ? `--base-scale: ${m.photoScale};`
+                      : ''}{m.photoPosition
+                      ? `object-position: ${m.photoPosition};`
+                      : ''}"
                   />
                 {:else}
                   <div class="member-placeholder">
