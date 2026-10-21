@@ -394,8 +394,8 @@
     <div class="panel panel--hero">
       <video
         class="hero-bg"
-        src="{base}/hero-reel.mp4"
-        poster="{base}/hero-reel.jpg"
+        src="{base}/herovideo.mp4"
+        poster="{base}/herovideo.jpg"
         autoplay
         muted
         loop
