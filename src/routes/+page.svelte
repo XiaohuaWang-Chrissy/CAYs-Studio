@@ -40,32 +40,6 @@
         close: 'Close',
         projects: [
           {
-            category: 'TikTok Promote · Creator 1',
-            year: '2026',
-            title: 'TikTok Promote — Creator 1',
-            preview: 'tiktok-male',
-            desc: "In-app ads for TikTok's Promote feature, fronted by a creator. Shot on the streets of New York, each video pairs talk-to-camera storytelling with motion graphics and in-app screen walkthroughs, breaking Promote down into three simple steps to grow views and followers. Four videos shown.",
-            videos: [
-              '/tiktok-male1.mp4',
-              '/tiktok-male2.mp4',
-              '/tiktok-male3.mp4',
-              '/tiktok-male4.mp4',
-            ],
-          },
-          {
-            category: 'TikTok Promote · Creator 2',
-            year: '2026',
-            title: 'TikTok Promote — Creator 2',
-            preview: 'tiktok-female',
-            desc: "In-app ads for TikTok's Promote feature, fronted by a creator. A mix of street vlogs, short skits, and in-app screen walkthroughs, showing how anyone can boost a video and grow their audience with no big budget needed. Four videos shown.",
-            videos: [
-              '/tiktok-female1.mp4',
-              '/tiktok-female2.mp4',
-              '/tiktok-female3.mp4',
-              '/tiktok-female4.mp4',
-            ],
-          },
-          {
             category: 'Creator Ad · Smart Lighting',
             year: '2026',
             title: 'Lepro · Creator Ads',
@@ -202,32 +176,6 @@
         open: '查看项目',
         close: '关闭',
         projects: [
-          {
-            category: 'TikTok Promote · 达人 1',
-            year: '2026',
-            title: 'TikTok Promote · 达人 1',
-            preview: 'tiktok-male',
-            desc: '为 TikTok 站内 Promote 推广功能制作的广告，由达人出镜。在纽约街头拍摄，结合口播叙事、动态图形与 App 内操作演示，将 Promote 拆解为三个简单步骤，展示如何提升播放量与粉丝数。此处展示4条。',
-            videos: [
-              '/tiktok-male1.mp4',
-              '/tiktok-male2.mp4',
-              '/tiktok-male3.mp4',
-              '/tiktok-male4.mp4',
-            ],
-          },
-          {
-            category: 'TikTok Promote · 达人 2',
-            year: '2026',
-            title: 'TikTok Promote · 达人 2',
-            preview: 'tiktok-female',
-            desc: '为 TikTok 站内 Promote 推广功能制作的广告，由达人出镜。融合街头 vlog、情景短剧与 App 内操作演示，展示无需高预算、人人都能一键推广视频、扩大受众。此处展示4条。',
-            videos: [
-              '/tiktok-female1.mp4',
-              '/tiktok-female2.mp4',
-              '/tiktok-female3.mp4',
-              '/tiktok-female4.mp4',
-            ],
-          },
           {
             category: '达人广告 · 智能照明',
             year: '2026',
