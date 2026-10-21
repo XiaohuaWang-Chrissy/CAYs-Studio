@@ -151,6 +151,8 @@
       },
       footer: {
         tagline: 'New York City',
+        affiliation:
+          "CAY's Studio is a creative studio of SpeedFa LLC, based in New York City.",
         copy: "© 2026 CAY's Studio",
       },
     },
@@ -292,6 +294,8 @@
       },
       footer: {
         tagline: '纽约',
+        affiliation:
+          "CAY's Studio 是 SpeedFa LLC 旗下的创意工作室，总部位于纽约。",
         copy: "© 2026 CAY's Studio",
       },
     },
@@ -394,8 +398,8 @@
     <div class="panel panel--hero">
       <video
         class="hero-bg"
-        src="{base}/herovideo.mp4"
-        poster="{base}/herovideo.jpg"
+        src="{base}/hero-reel.mp4"
+        poster="{base}/hero-reel.jpg"
         autoplay
         muted
         loop
@@ -659,6 +663,9 @@
 
       <footer class="panel-footer">
         <p class="footer-tagline">{t.footer.tagline}</p>
+        {#if t.footer.affiliation}
+          <p class="footer-affiliation">{t.footer.affiliation}</p>
+        {/if}
         <p class="footer-copy">{t.footer.copy}</p>
       </footer>
     </div>
@@ -1573,6 +1580,15 @@
     @include mono-label;
     color: var(--color-fg-muted);
     margin-bottom: 0.3rem;
+  }
+
+  .footer-affiliation {
+    max-width: 32rem;
+    margin: 0 auto 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: var(--color-fg-muted);
+    opacity: 0.85;
   }
 
   .footer-copy {
