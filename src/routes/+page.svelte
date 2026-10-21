@@ -40,6 +40,14 @@
         close: 'Close',
         projects: [
           {
+            category: 'Creator Ad · Outdoor Living',
+            year: '2026',
+            title: 'FlexPatio · Creator Ads',
+            preview: 'canopy',
+            desc: 'Creator-led product ads for FlexPatio, a motorized retractable patio canopy. Each video is a hands-on, talk-to-camera demo shot in a native creator format — one-tap open and close, real backyard use through sun and rain, and a direct call to action. Two videos shown.',
+            videos: ['/canopy1.mp4', '/canopy2.mp4'],
+          },
+          {
             category: 'Creator Ad · Smart Lighting',
             year: '2026',
             title: 'Lepro · Creator Ads',
@@ -176,6 +184,14 @@
         open: '查看项目',
         close: '关闭',
         projects: [
+          {
+            category: '达人广告 · 户外生活',
+            year: '2026',
+            title: 'FlexPatio · 达人广告',
+            preview: 'canopy',
+            desc: '为电动伸缩庭院遮阳棚品牌 FlexPatio 制作的达人出镜产品广告。每条视频以达人口播实拍的原生形式呈现一键开合、庭院遮阳挡雨的真实使用场景与直接的购买引导。此处展示2条。',
+            videos: ['/canopy1.mp4', '/canopy2.mp4'],
+          },
           {
             category: '达人广告 · 智能照明',
             year: '2026',
@@ -1024,7 +1040,7 @@
 
   .work-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.75rem;
 
     @include mobile {

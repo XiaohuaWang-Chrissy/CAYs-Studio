@@ -20,9 +20,11 @@ static/*.webm
 !static/hero-reel.mp4
 !static/flashlight*.mp4
 !static/tiktok-*.mp4
+!static/canopy*.mp4
 
 # Raw source footage and full-size photos — compressed copies live in static/
 /flash light达人广告/
 /TikTok男达人/
 /TikTok女达人/
+/电动棚子/
 /Chloe Chi.JPG
