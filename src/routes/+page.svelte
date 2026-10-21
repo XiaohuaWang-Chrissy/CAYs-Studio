@@ -82,7 +82,7 @@
         members: [
           {
             name: 'Alexa Ge',
-            role: 'Co-Founder',
+            role: 'Founder',
             photo: '/Alexa.JPG',
             photoScale: 1.35,
             website: '/Alexa Portfolio 2026.pdf',
@@ -90,7 +90,7 @@
           },
           {
             name: 'Chrissy Wang',
-            role: 'Co-Founder',
+            role: 'Video Director',
             photo: '/Chrissy.JPG',
             website:
               'https://xiaohuawang-chrissy.github.io/my-static-site-personal/',
@@ -229,7 +229,7 @@
         members: [
           {
             name: 'Alexa Ge',
-            role: '联合创始人',
+            role: '创始人',
             photo: '/Alexa.JPG',
             photoScale: true,
             website: '/Alexa Portfolio 2026.pdf',
@@ -237,7 +237,7 @@
           },
           {
             name: 'Chrissy Wang',
-            role: '联合创始人',
+            role: '视频导演',
             photo: '/Chrissy.JPG',
             website:
               'https://xiaohuawang-chrissy.github.io/my-static-site-personal/',
